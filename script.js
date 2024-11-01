@@ -21,56 +21,56 @@ document.addEventListener('alpine:init', () => {
                 readTime: 15,
                 url: "posts/comprendre-l-ia-de-a-a-z.html"
             },
-            {
-                id: 2,
-                title: "La montée en puissance du cloud computing",
-                description: "Explorez comment le cloud transforme les processus métier et offre de nouvelles opportunités d'innovation et de croissance.",
-                image: "img/Frame1.png",
-                category: "Cloud",
-                date: "2024-10-30",
-                readTime: 6,
-                url: "posts/post-example.html"
-            },
-            {
-                id: 3,
-                title: "Sécurité web : protégez votre application",
-                description: "Apprenez à sécuriser efficacement votre site web contre les cyberattaques avec ces techniques éprouvées par les experts.",
-                image: "img/Frame1.png",
-                category: "Sécurité",
-                date: "2024-10-29",
-                readTime: 7,
-                url: "posts/post-example.html"
-            },
-            {
-                id: 4,
-                title: "L'essor du développement mobile en 2024",
-                description: "Découvrez les technologies émergentes et les stratégies gagnantes pour créer des applications mobiles performantes.",
-                image: "img/Frame1.png",
-                category: "Mobile",
-                date: "2024-10-28",
-                readTime: 4,
-                url: "posts/post-example.html"
-            },
-            {
-                id: 5,
-                title: "Machine Learning pour développeurs web",
-                description: "Un parcours détaillé pour intégrer l'apprentissage automatique dans vos projets web, de la théorie à la pratique.",
-                image: "img/Frame1.png",
-                category: "Data Science",
-                date: "2024-10-27",
-                readTime: 9,
-                url: "posts/post-example.html"
-            },
-            {
-                id: 6,
-                title: "L'art de l'UX Writing",
-                description: "Apprenez à rédiger des textes d'interface efficaces qui améliorent l'expérience utilisateur et augmentent les conversions.",
-                image: "img/Frame1.png",
-                category: "Design",
-                date: "2024-10-26",
-                readTime: 5,
-                url: "posts/post-example.html"
-            },
+            // {
+            //     id: 2,
+            //     title: "La montée en puissance du cloud computing",
+            //     description: "Explorez comment le cloud transforme les processus métier et offre de nouvelles opportunités d'innovation et de croissance.",
+            //     image: "img/Frame1.png",
+            //     category: "Cloud",
+            //     date: "2024-10-30",
+            //     readTime: 6,
+            //     url: "posts/post-example.html"
+            // },
+            // {
+            //     id: 3,
+            //     title: "Sécurité web : protégez votre application",
+            //     description: "Apprenez à sécuriser efficacement votre site web contre les cyberattaques avec ces techniques éprouvées par les experts.",
+            //     image: "img/Frame1.png",
+            //     category: "Sécurité",
+            //     date: "2024-10-29",
+            //     readTime: 7,
+            //     url: "posts/post-example.html"
+            // },
+            // {
+            //     id: 4,
+            //     title: "L'essor du développement mobile en 2024",
+            //     description: "Découvrez les technologies émergentes et les stratégies gagnantes pour créer des applications mobiles performantes.",
+            //     image: "img/Frame1.png",
+            //     category: "Mobile",
+            //     date: "2024-10-28",
+            //     readTime: 4,
+            //     url: "posts/post-example.html"
+            // },
+            // {
+            //     id: 5,
+            //     title: "Machine Learning pour développeurs web",
+            //     description: "Un parcours détaillé pour intégrer l'apprentissage automatique dans vos projets web, de la théorie à la pratique.",
+            //     image: "img/Frame1.png",
+            //     category: "Data Science",
+            //     date: "2024-10-27",
+            //     readTime: 9,
+            //     url: "posts/post-example.html"
+            // },
+            // {
+            //     id: 6,
+            //     title: "L'art de l'UX Writing",
+            //     description: "Apprenez à rédiger des textes d'interface efficaces qui améliorent l'expérience utilisateur et augmentent les conversions.",
+            //     image: "img/Frame1.png",
+            //     category: "Design",
+            //     date: "2024-10-26",
+            //     readTime: 5,
+            //     url: "posts/post-example.html"
+            // },
         ],
         visibleCount: 4,
         get visibleArticles() {
