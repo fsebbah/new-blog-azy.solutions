@@ -137,6 +137,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     window.addEventListener('scroll', setActiveLink);
     setActiveLink();
 
+    // Open menu
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+
     // Close menu when clicking outside
     document.addEventListener('click', (event) => {
         if (!nav.contains(event.target) && !menuToggle.contains(event.target)) {
