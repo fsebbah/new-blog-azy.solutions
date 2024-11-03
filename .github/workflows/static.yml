@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Deploy static blog content to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -24,15 +24,28 @@ concurrency:
 jobs:
   # Single deploy job since we're just deploying
   deploy:
+    runs-on: ubuntu-latest
+    env:
+      SITE_TEST_URL: "https://fsebbah.github.io/new-azy.solutions/"  # URL de test pour le blog azy.solutions
+      SITE__PROD_URL: "https://azy.solutions/"  # URL de test pour le blog azy.solutions
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      - name: Set environment URLs
+        run: |
+          if [ "${{ github.ref }}" == "refs/heads/main" ]; then
+            echo "SITE_URL=${{ env.SITE_PROD_URL }}" >> $GITHUB_ENV
+          else
+            echo "SITE_URL=${{ env.SITE_TEST_URL }}" >> $GITHUB_ENV
+          fi
+          sed -i "s|__SITE_URL__|$SITE_URL|g" ./*.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
