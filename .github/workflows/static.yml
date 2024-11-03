@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SITE_TEST_URL: "https://fsebbah.github.io/new-azy.solutions/"  # URL de test pour le blog azy.solutions
-      SITE__PROD_URL: "https://azy.solutions/"  # URL de test pour le blog azy.solutions
+      SITE_PROD_URL: "https://azy.solutions/"  # URL de test pour le blog azy.solutions
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
