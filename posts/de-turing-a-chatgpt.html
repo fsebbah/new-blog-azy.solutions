@@ -27,7 +27,7 @@
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <link rel="stylesheet" href="../style.css">
 </head>
-<body x-data="blogData">
+<body>
     <header>
         <div class="container">
             <div class="header-content">
@@ -164,7 +164,7 @@
             </div>
         </main>
     </div>
-    <section class="related-articles" x-show="relatedArticles(1).length > 0">
+    <template x-data="blogData" class="related-articles" x-show="relatedArticles(1).length > 0">
         <h2>Autres articles sur le même thème</h2>
 
         <div class="article-grid">
@@ -181,7 +181,7 @@
                 </div>
             </template>
         </div>
-    </section>
+    </template>
 
     <div id="thankYouMessage" class="modal">
         <div class="modal-content">
@@ -308,7 +308,7 @@
                                                         <label>
                                                             <input type="checkbox" class="input_replaced" value="1" id="OPT_IN" name="OPT_IN" required />
                                                             <span class="checkbox checkbox_tick_positive"
-                                                                  style="margin-left:"
+
                                                             ></span><span style="font-size:14px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent;"><p>J'accepte les <a href="https://fsebbah.github.io/new-azy.solutions/#">termes et conditions</a>.</p><span data-required="*" style="display: inline;" class="entry__label entry__label_optin"></span></span> </label>
                                                     </div>
                                                 </div>
