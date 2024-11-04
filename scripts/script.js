@@ -159,7 +159,7 @@ document.addEventListener('alpine:init', () => {
                 id: 5,
                 title: "Homme vs Machine : l’IA peut-elle vraiment surpasser l’intelligence humaine ?",
                 description: "Avec des avancées impressionnantes comme la victoire d’AlphaGo contre le champion Lee Sedol en 2016, l’intelligence artificielle semble franchir des barrières autrefois réservées à l’intuition et à la créativité humaines. .",
-                image: "assets/img/article_5.jpg",
+                image: "../assets/img/article_5.jpg",
                 category: "Data Science",
                 date: "2024-10-27",
                 readTime: 9,
