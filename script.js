@@ -120,7 +120,7 @@ document.addEventListener('alpine:init', () => {
             description: "Vous ne l’avez peut-être pas remarqué, mais l’intelligence artificielle s’est infiltrée partout dans notre quotidien. Elle suggère vos prochaines séries sur Netflix, pilote les voitures autonomes, détecte les fraudes bancaires et aide même les médecins à diagnostiquer des maladies.",
             image: "img/Frame1.png",
             category: "Intelligence Artificielle",
-            date: "2024-11-01",
+            date: "2024-11-05",
             readTime: 8,
             url: "posts/de-turing-a-chatgpt.html"
         },
@@ -131,7 +131,7 @@ document.addEventListener('alpine:init', () => {
                 description: "L'intelligence artificielle (IA) s'inscrit dans presque tous les aspects de notre vie quotidienne, de la santé à l'économie en passant par les loisirs. Elle suscite autant de fascination que de questions, surtout avec l'impact qu'elle a et continuera d'avoir sur notre société.",
                 image: "img/Frame1.png",
                 category: "Intelligence Artificielle",
-                date: "2024-11-01",
+                date: "2024-11-06",
                 readTime: 15,
                 url: "posts/comprendre-l-ia-de-a-a-z.html"
             },
@@ -141,7 +141,7 @@ document.addEventListener('alpine:init', () => {
                 description: "Explorez comment le cloud transforme les processus métier et offre de nouvelles opportunités d'innovation et de croissance.",
                 image: "img/Frame1.png",
                 category: "Cloud",
-                date: "2024-10-30",
+                date: "2024-11-07",
                 readTime: 6,
                 url: "posts/post-example.html"
             },
@@ -151,7 +151,7 @@ document.addEventListener('alpine:init', () => {
                 description: "Apprenez à sécuriser efficacement votre site web contre les cyberattaques avec ces techniques éprouvées par les experts.",
                 image: "img/Frame1.png",
                 category: "Sécurité",
-                date: "2024-10-29",
+                date: "2024-11-08",
                 readTime: 7,
                 url: "posts/post-example.html"
             },
@@ -161,7 +161,7 @@ document.addEventListener('alpine:init', () => {
                 description: "Découvrez les technologies émergentes et les stratégies gagnantes pour créer des applications mobiles performantes.",
                 image: "img/Frame1.png",
                 category: "Mobile",
-                date: "2024-10-28",
+                date: "2024-11-09",
                 readTime: 4,
                 url: "posts/post-example.html"
             },
