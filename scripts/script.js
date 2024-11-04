@@ -126,16 +126,6 @@ document.addEventListener('alpine:init', () => {
         },
         articles: [
             {
-                id: 1,
-                title: "Comprendre l'IA de A à Z : les notions clés de l'intelligence artificielle expliquées",
-                description: "L'intelligence artificielle (IA) s'inscrit dans presque tous les aspects de notre vie quotidienne, de la santé à l'économie en passant par les loisirs. Elle suscite autant de fascination que de questions, surtout avec l'impact qu'elle a et continuera d'avoir sur notre société.",
-                image: "img/Frame1.png",
-                category: "Intelligence Artificielle",
-                date: "2024-11-06",
-                readTime: 15,
-                url: "posts/comprendre-l-ia-de-a-a-z.html"
-            },
-            {
                 id: 2,
                 title: "Comprendre l’IA de A à Z : les notions clés de l’intelligence artificielle expliquées.",
                 description: "Vous entendez parler d'IA tous les jours, mais savez-vous vraiment comment elle fonctionne ? Des assistants vocaux aux voitures autonomes, en passant par la détection de fraudes bancaires... L'IA est partout !",
