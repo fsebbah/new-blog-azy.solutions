@@ -137,8 +137,8 @@ document.addEventListener('alpine:init', () => {
             },
             {
                 id: 2,
-                title: "La montée en puissance du cloud computing",
-                description: "Explorez comment le cloud transforme les processus métier et offre de nouvelles opportunités d'innovation et de croissance.",
+                title: "Comprendre l’IA de A à Z : les notions clés de l’intelligence artificielle expliquées.",
+                description: "Vous entendez parler d'IA tous les jours, mais savez-vous vraiment comment elle fonctionne ? Des assistants vocaux aux voitures autonomes, en passant par la détection de fraudes bancaires... L'IA est partout !",
                 image: "img/Frame1.png",
                 category: "Cloud",
                 date: "2024-11-07",
@@ -167,9 +167,9 @@ document.addEventListener('alpine:init', () => {
             },
             {
                 id: 5,
-                title: "Machine Learning pour développeurs web",
-                description: "Un parcours détaillé pour intégrer l'apprentissage automatique dans vos projets web, de la théorie à la pratique.",
-                image: "img/Frame1.png",
+                title: "Homme vs Machine : l’IA peut-elle vraiment surpasser l’intelligence humaine ?",
+                description: "Avec des avancées impressionnantes comme la victoire d’AlphaGo contre le champion Lee Sedol en 2016, l’intelligence artificielle semble franchir des barrières autrefois réservées à l’intuition et à la créativité humaines. .",
+                image: "img/article_5.jpg",
                 category: "Data Science",
                 date: "2024-10-27",
                 readTime: 9,
