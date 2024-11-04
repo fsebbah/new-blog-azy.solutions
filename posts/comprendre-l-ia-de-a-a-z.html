@@ -1,389 +1,111 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!-- Métadonnées spécifiques à l'article -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AZY Solutions | Comprendre l'IA de A à Z</title>
     <meta name="description" content="Découvrez les concepts clés de l'intelligence artificielle, de l'apprentissage automatique au deep learning. Explorez les applications de l'IA dans notre quotidien et les défis qu'elle soulève. Un guide complet pour comprendre l'IA de A à Z.">
     <meta name="keywords" content="intelligence artificielle, IA, machine learning, deep learning, traitement du langage naturel, IA générative, applications IA, défis IA">
     <meta name="author" content="AZY Solutions">
 
+    <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://azy.solutions/blog/comprendre-ia-de-a-a-z">
     <meta property="og:title" content="Comprendre l'IA de A à Z : les notions clés de l'intelligence artificielle expliquées">
     <meta property="og:description" content="Découvrez les concepts fondamentaux de l'IA, ses applications quotidiennes et les défis qu'elle pose dans ce guide complet sur l'intelligence artificielle.">
-    <meta property="og:image" content="https://azy.solutions/img/hero-image.png">
+    <meta property="og:image" content="https://azy.solutions/assets/img/hero-image.png">
 
+    <!-- Twitter Card -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://azy.solutions/blog/comprendre-ia-de-a-a-z">
     <meta property="twitter:title" content="Comprendre l'IA de A à Z : les notions clés de l'intelligence artificielle expliquées">
     <meta property="twitter:description" content="Découvrez les concepts fondamentaux de l'IA, ses applications quotidiennes et les défis qu'elle pose dans ce guide complet sur l'intelligence artificielle.">
-    <meta property="twitter:image" content="https://azy.solutions/img/hero-image.png">
+    <meta property="twitter:image" content="https://azy.solutions/assets/img/hero-image.png">
 
+    <!-- SEO supplémentaire -->
     <meta name="robots" content="index, follow">
     <meta name="language" content="French">
     <meta name="revisit-after" content="7 days">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
-
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/images.css">
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="../index.html"><div class="logo"><img src="../img/azysolutions-logo.svg" alt=""></div></a>
-                <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-                <nav>
-                    <a href="https://azy.solutions" class="btn">Retour au site</a>
-                </nav>
-            </div>
-        </div>
-    </header>
 
-    <div class="container">
-        <main>
-            <div class="post-hero">
-                <div class="tag">Intelligence Artificielle</div>
-
-                <h1>Comprendre l'IA de A à Z :<br>les notions clés de l'intelligence<br>artificielle expliquées</h1>
-                <p class="meta">15 minutes de lecture | Publié le 01/11/2024</p>
-
-                <div class="post-hero-image">
-                    <img src="../img/hero-image.png" alt="Illustration représentant les concepts clés de l'IA">
-                </div>
-            </div>
-
-            <div class="content-wrapper">
-                <aside class="sidebar">
-                    <ul>
-                        <li><a href="#introduction">Introduction</a></li>
-                        <li><a href="#definition">Concrètement, l'IA c'est quoi ?</a></li>
-                        <li><a href="#technologies">Dans les coulisses de l'IA</a></li>
-                        <li><a href="#quotidien">L'IA au quotidien</a></li>
-                        <li><a href="#defis">Les défis de l'IA</a></li>
-                    </ul>
-                </aside>
-                <div class="main-content">
-                    <div class="highlight-box">
-                        <h3>Points clés à retenir</h3>
-                        <ul>
-                            <li>Machine Learning: les machines apprennent automatiquement à partir des données</li>
-                            <li>Deep Learning: reproduction du fonctionnement du cerveau humain pour des tâches complexes</li>
-                            <li>Traitement du Langage Naturel : permet aux machines de comprendre et générer du langage</li>
-                            <li>IA générative : création de nouveaux contenus (textes, images, sons) par l'intelligence artificielle</li>
-                        </ul>
-                    </div>
-                    <section id="introduction">
-                        <p>
-                            L'intelligence artificielle (IA) s'inscrit dans presque tous les aspects de notre vie quotidienne, de la santé à l'économie en passant par les loisirs. Elle suscite autant de fascination que de questions, surtout avec l'impact qu'elle a et continuera d'avoir sur notre société.
-                        </p>
-                        <p>
-                            Cet article propose de démystifier les notions clés de l'IA pour en offrir une compréhension accessible à tous les publics. Découvrez les dessous de cette technologie pour mieux comprendre comment elle fonctionne !
-                        </p>
-                    </section>
-                    <section id="definition">
-                        <h2>Concrètement, l'IA c'est quoi ?</h2>
-                        <p>
-                            L'IA donne aux machines la capacité d'accomplir des tâches habituellement réservées à l'intelligence humaine. Elle leur permet de comprendre la parole, de prendre des décisions complexes et de résoudre des problèmes sophistiqués<sup>[1]</sup>. Pour y parvenir, elle mobilise différentes technologies qui permettent aux machines de traiter l'information, d'apprendre et d'interagir de manière autonome.
-                        </p>
-                        <h3>Les grands principes de l'IA</h3>
-                        <p>
-                            Les technologies qui alimentent l'IA reposent sur des modèles mathématiques, des statistiques avancées et des algorithmes sophistiqués. L'objectif : permettre aux machines de traiter de vastes quantités de données pour « apprendre » et faire des prédictions<sup>[1]</sup>. Cet apprentissage se fait en analysant des schémas récurrents, améliorant ainsi les performances au fil du temps.
-                        </p>
-                        <p>
-                            Pour mieux comprendre l'IA d'aujourd'hui, vous pouvez découvrir son évolution depuis les années 50 dans notre premier article.
-                        </p>
-                    </section>
-                    <section id="technologies">
-                        <h2>Dans les coulisses de l'IA : les technologies qui changent la donne</h2>
-                        <p>
-                            Pour vous familiariser avec le fonctionnement des intelligences artificielles, voici quelques notions expliquées simplement.
-                        </p>
-                        <h3>Machine Learning: des machines qui apprennent toutes seules</h3>
-                        <p>
-                            Le Machine Learning (ML) est une sous-branche de l'IA qui permet aux ordinateurs de progresser sans intervention humaine directe. En analysant les données qu'elles reçoivent, les machines identifient des patterns (« schémas ») et font des prédictions. Les méthodes d'apprentissage sont variées : supervisé, non supervisé et par renforcement<sup>[2]</sup>. Par exemple, l'apprentissage supervisé utilise des données annotées pour « former » les modèles, tandis que l'apprentissage par renforcement s'appuie sur un système de récompenses et de pénalités pour perfectionner les résultats.
-                        </p>
-                        <h3>Deep Learning: quand l'IA imite le cerveau humain</h3>
-                        <p>
-                            Le Deep Learning (DL) va plus loin en reproduisant, grâce aux réseaux de neurones, la structure d'un cerveau humain. Ces derniers permettent aux machines de traiter des informations complexes, notamment pour des tâches comme la reconnaissance d'images et la compréhension du langage<sup>[2]</sup>. Différente du Machine Learning classique, cette approche excelle dans des domaines nécessitant une compréhension plus fine, comme la vision par ordinateur et la traduction automatique.
-                        </p>
-                        <h3>Traitement du Langage Naturel : les machines apprennent à nous parler</h3>
-                        <p>
-                            Le Traitement du Langage Naturel (NLP) permet aux machines de comprendre et de générer du langage humain. Cette technologie, essentielle pour les assistants vocaux et les chat bots, repose sur des modèles qui analysent et interprètent les intentions de nos mots. Les applications sont nombreuses : des systèmes de service client automatisés aux traducteurs en ligne, le NLP joue un rôle central dans l'interaction entre les humains et les machines<sup>[1]</sup>.
-                        </p>
-                        <h3>IA générative : la nouvelle frontière de la créativité artificielle</h3>
-                        <p>
-                            L'IA générative permet de créer des contenus nouveaux, qu'il s'agisse d'images, de textes, de vidéos ou de sons, en utilisant des modèles avancés. Son fonctionnement repose également sur des réseaux de neurones qui génèrent du contenu en analysant des ensembles de données de référence.
-                        </p>
-                        <h4>Les catégories majeures de l'IA générative</h4>
-                        <p>
-                            L'IA générative se décline en plusieurs applications, notamment la génération d'images et de textes<sup>[3]</sup>. Dans les industries créatives, elle révolutionne la publicité, l'art digital et le contenu interactif. Par exemple, des entreprises utilisent des IA pour concevoir des visuels publicitaires ou des scénarios de jeux vidéo.
-                        </p>
-                    </section>
-                    <div class="timeline-visualization">
-                        <h3>L'évolution de l'intelligence artificielle en un coup d'œil</h3>
-                        <img src="../img/time-ia.svg" alt="Frise chronologique de l'évolution de l'intelligence artificielle, de Turing à nos jours" class="timeline-image">
-                    </div>
-                    <section id="quotidien">
-                        <h2>L'IA au quotidien : ces algorithmes qui nous simplifient la vie au travail</h2>
-                        <p>
-                            L'IA s'intègre déjà dans de nombreux secteurs d'activité. Elle peut prendre la forme d'un logiciel spécialisé, d'un appareil intelligent ou d'un service automatisé. Son objectif : optimiser les processus, automatiser les tâches répétitives et améliorer l'expérience utilisateur.
-                        </p>
-                        <h3>Santé et médecine : des diagnostics à la médecine personnalisée</h3>
-                        <p>
-                            Dans le secteur médical, l'IA aide au diagnostic précoce de maladies et à la personnalisation des traitements en fonction des données du patient. Les algorithmes d'IA analysent les dossiers médicaux, identifient les risques et proposent des options de traitement<sup>[1]</sup>, contribuant ainsi à une meilleure prise en charge des patients.
-                        </p>
-                        <h3>Finance et transactions : un secteur sécurisé et automatisé</h3>
-                        <p>
-                            Les technologies de l'IA protègent contre les fraudes financières, automatisent les processus et offrent des prédictions de marché. En analysant les transactions en temps réel, l'IA détecte les anomalies pour prévenir les fraudes<sup>[3]</sup>. Elle optimise aussi les opérations et les investissements financiers.
-                        </p>
-                        <h3>Transport et mobilité : vers l'autonomie et l'optimisation</h3>
-                        <p>
-                            Les algorithmes de l'IA interviennent également dans le secteur des transports. Ils rendent possible le développement de véhicules autonomes et l'optimisation des trajets<sup>[2]</sup>. Cette technologie permet d'éviter les embouteillages et de réduire les coûts en carburant en optimisant les trajets en temps réel.
-                        </p>
-                        <h3>Divertissement et réseaux sociaux : IA au service de nos loisirs</h3>
-                        <p>
-                            L'IA contribue au développement de plateformes de divertissement et de réseaux sociaux, en proposant du contenu personnalisé et en recommandant des contenus selon nos préférences. Elle améliore aussi les expériences utilisateur<sup>[1]</sup> en optimisant les interactions de manière à augmenter l'engagement et la satisfaction des utilisateurs.
-                        </p>
-                    </section>
-                    <section id="defis">
-                        <h2>Les défis de l'IA : entre promesses et vigilance</h2>
-                        <p>
-                            Bien que l'intelligence artificielle semble simplifier bien des aspects de notre vie quotidienne, elle soulève également des enjeux majeurs et de nombreuses questions. Derrière ses prouesses technologiques se cachent des défis complexes qui exigent une attention particulière pour garantir une utilisation équitable, sécurisée et éthique de cette technologie. En voici quelques-uns !
-                        </p>
-                        <h3>Les biais algorithmiques : vers une IA plus équitable</h3>
-                        <p>
-                            Les biais algorithmiques représentent l'un des défis majeurs de l'IA. Les algorithmes, bien que puissants, reflètent parfois les biais présents dans les données d'entraînement. Cela peut mener à des injustices, en particulier dans des domaines sensibles comme l'embauche et la justice<sup>[1]</sup>.
-                        </p>
-                        <h3>Protection des données : le respect de la vie privée</h3>
-                        <p>
-                            L'IA collecte et analyse de nombreuses données, posant des questions cruciales sur la confidentialité et la sécurité. L'enjeu est de taille, surtout avec les lois sur la protection des données personnelles comme le RGPD en Europe. Des mesures de sécurité renforcées doivent être prises pour assurer une utilisation éthique de l'IA<sup>[2]</sup>.
-                        </p>
-                        <h3>Désinformation et manipulation : une vigilance nécessaire</h3>
-                        <p>
-                            L'IA générative permet de créer des contenus factices, posant des risques de désinformation. Des technologies permettent de générer de fausses informations et des deepfakes qui rendent encore plus complexe la distinction entre le vrai et le faux<sup>[4]</sup>. Par conséquent, les plateformes travaillent à des solutions pour identifier ces contenus et réduire leur impact.
-                        </p>
-                        <p>
-                            Nous nous en sommes déjà rendu compte, l'IA est une technologie aux multiples facettes qui transforme des secteurs entiers tout en posant des questions éthiques et sociales. Alors, c'est en apprenant à comprendre comment elle fonctionne qu'il est possible de s'en servir de manière responsable. Et oui, en adoptant une approche plus vigilante et transparente, nous pouvons tirer le meilleur de cette technologie en pleine expansion sans qu'elle ne devienne une menace.
-                        </p>
-                    </section>
-                    <div class="learn-more">
-                        <h3>Sources</h3>
-                        <ol>
-                            <li id="ref1"><a href="https://www.obvia.ca/sites/obvia.ca/files/ressources/202409-OBV-Pub-Abecedaire_IA_1.pdf" target="_blank">OBVIA - Abécédaire de l'IA</a></li>
-                            <li id="ref2"><a href="https://medium.com/@eytanmessika/intelligence-artificielle-1o1-tout-comprendre-sur-ce-d%C3%A9lire-dia-cb8402e253bb" target="_blank">Eytan Messika, « Intelligence Artificielle 101 »</a></li>
-                            <li id="ref3"><a href="https://bigmedia.bpifrance.fr/news/intelligence-artificielle-generative-de-quoi-parle-t" target="_blank">Bpifrance - IA Générative : Nouvelles perspectives</a></li>
-                            <li id="ref4"><a href="https://www.rfi.fr/fr/podcasts/les-dessous-de-l-infox/20230616-l-usage-grand-public-des-ia-g%C3%A9n%C3%A9ratives-et-les-manipulations-de-l-information" target="_blank">RFI - Manipulations et usages publics des IA</a></li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-    <template x-data="blogData" class="related-articles" x-show="relatedArticles(1).length > 0">
-        <h2>Autres articles sur le même thème</h2>
-
-        <div class="article-grid">
-            <template x-for="article in relatedArticles(1)" :key="article.id">
-                <div class="article-card">
-                    <img :src="article.image" :alt="article.title">
-                    <div class="content">
-                        <h3 x-text="article.title"></h3>
-                        <p x-text="article.description"></p>
-                        <a href="#" class="read-more">
-                            Lire l'article
-                        </a>
-                    </div>
-                </div>
-            </template>
-        </div>
-    </template>
-
-    <div id="thankYouMessage" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Merci pour votre inscription !</h5>
-                <button type="button" class="close" aria-label="Fermer" id="closePopupTks">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>Nous avons bien reçu votre inscription à notre newsletter. Vous recevrez bientôt nos dernières nouvelles et offres spéciales !</p>
-            </div>
+<!-- Contenu de l'article -->
+<main>
+    <div class="post-hero">
+        <div class="tag">Intelligence Artificielle</div>
+        <h1>Comprendre l'IA de A à Z :<br>les notions clés de l'intelligence<br>artificielle expliquées</h1>
+        <p class="meta">15 minutes de lecture | Publié le 01/11/2024</p>
+        <div class="post-hero-image">
+            <img src="../assets/img/hero-image.png" alt="Illustration représentant les concepts clés de l'IA">
         </div>
     </div>
 
-    <section class="newsletter" id="newsletter" data-aos="fade-up">
-        <div class="container">
-            <div class="col-md-6 form">
-                <p>Ne manquez pas nos dernières publications</p>
-                <h2>Inscription à la newsletter</h2>
-                <div class="form">
-                    <!-- Begin Brevo Form -->
-                    <!-- START - We recommend to place the below code in head tag of your website html  -->
-                    <style>
-                        @font-face {
-                            font-display: block;
-                            font-family: Roboto;
-                            src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
-                        }
-
-                        @font-face {
-                            font-display: fallback;
-                            font-family: Roboto;
-                            font-weight: 600;
-                            src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
-                        }
-
-                        @font-face {
-                            font-display: fallback;
-                            font-family: Roboto;
-                            font-weight: 700;
-                            src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
-                        }
-
-                        #sib-container input:-ms-input-placeholder {
-                            text-align: left;
-                            font-family: Helvetica, sans-serif;
-                            color: #c0ccda;
-                        }
-
-                        #sib-container input::placeholder {
-                            text-align: left;
-                            font-family: Helvetica, sans-serif;
-                            color: #c0ccda;
-                        }
-
-                        .sib-form-block{
-                            margin: 0px!important;
-                            padding: 0px!important;
-                        }
-
-                        #sib-container{
-                            border: none !important;
-                            margin: 0px!important;
-                            padding: 0px!important;
-                        }
-
-                        .sib-form{
-                            padding: 0px !important;
-                            border: none !important;
-                        }
-
-                        #sib-container a {
-                            text-decoration: underline;
-                            color: #2BB2FC;
-                        }
-
-                        #email{
-                            width: 400px;
-                        }
-
-                        @media (max-width: 480px) {
-                            #email{
-                                width: 300px;
-                            }
-                        }
-
-                        @media (max-width: 320px) {
-                            #email{
-                                width: 200px;
-                            }
-                        }
-                    </style>
-                    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-                    <!--  END - We recommend to place the above code in head tag of your website html -->
-
-                    <!-- START - We recommend to place the below code where you want the form in your website html  -->
-                    <div class="sib-form" style="text-align: center;
-         background-color: #EFF2F7;                                           ">
-                        <div id="sib-form-container" class="sib-form-container">
-                            <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px; border-radius:3px; border-width:1px; border-color:#C0CCD9; border-style:solid;">
-                                <form id="sib-form" method="POST" action="https://a512c694.sibforms.com/serve/MUIFALa10NE11MXUv9HdB1x7nQdNuz6IGqdfR3LqFJwg21PAJtIBdIh07sTKadEfpB9AGYvzpKiHKeQTehsd9Exe0BMf-kxojK3Z6YDITU2AnRQ0t6k0BZ5-4lPITNnw6iHLOLczDCHcs56Aeq3ig6SoP0eTPbmw00B_JK1Bz7Vk4nJsCec1WISwlcU526qbSAOcI0specsqksVW">
-                                    <div style="">
-                                    </div>
-                                    <div id="email" style="padding: 8px 0;">
-                                        <div class="sib-input sib-form-block">
-                                            <div class="form__entry entry_block">
-                                                <div class="form__label-row ">
-                                                    <div class="entry__field">
-                                                        <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
-                                                    </div>
-                                                </div>
-
-                                                <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div style="padding: 8px 0;">
-                                        <div class="sib-optin sib-form-block" data-required="true">
-                                            <div class="form__entry entry_mcq">
-                                                <div class="form__label-row ">
-                                                    <div class="entry__choice" style="">
-                                                        <label>
-                                                            <input type="checkbox" class="input_replaced" value="1" id="OPT_IN" name="OPT_IN" required />
-                                                            <span class="checkbox checkbox_tick_positive"
-
-                                                            ></span><span style="font-size:14px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent;"><p>J'accepte les <a href="https://fsebbah.github.io/new-azy.solutions/#">termes et conditions</a>.</p><span data-required="*" style="display: inline;" class="entry__label entry__label_optin"></span></span> </label>
-                                                    </div>
-                                                </div>
-                                                <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div style="padding: 8px 0;">
-                                        <div class="sib-form-block" style="text-align: left">
-                                            <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#FFFFFF; background-color:#8f2d8c; border-radius:3px; border-width:0px;" form="sib-form" type="submit">
-                                                <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
-                                                    <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
-                                                </svg>
-                                                M&#039;INSCRIRE
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <input type="text" name="email_address_check" value="" class="input--hidden">
-                                    <input type="hidden" name="locale" value="fr">
-                                    <input type="hidden" name="html_type" value="simple">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END - We recommend to place the above code where you want the form in your website html  -->
-                    <!-- End Brevo Form -->
-                </div>
-            </div>
-            <div class="icon"></div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="logo"><img src="../img/azysolutions-logo.svg" alt=""></div>
+    <div class="content-wrapper">
+        <aside class="sidebar">
             <ul>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Mentions légales</a></li>
-                <li><a href="#">Politique de confidentialité</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#definition">Concrètement, l'IA c'est quoi ?</a></li>
+                <li><a href="#technologies">Dans les coulisses de l'IA</a></li>
+                <li><a href="#quotidien">L'IA au quotidien</a></li>
+                <li><a href="#defis">Les défis de l'IA</a></li>
             </ul>
-            <div class="social">
-                <a href="#" aria-label="LinkedIn">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                </a>
+        </aside>
+        <div class="main-content">
+            <div class="highlight-box">
+                <h3>Points clés à retenir</h3>
+                <ul>
+                    <li>Machine Learning: les machines apprennent automatiquement à partir des données</li>
+                    <li>Deep Learning: reproduction du fonctionnement du cerveau humain pour des tâches complexes</li>
+                    <li>Traitement du Langage Naturel : permet aux machines de comprendre et générer du langage</li>
+                    <li>IA générative : création de nouveaux contenus (textes, images, sons) par l'intelligence artificielle</li>
+                </ul>
+            </div>
+
+            <section id="introduction">
+                <p>
+                    L'intelligence artificielle (IA) s'inscrit dans presque tous les aspects de notre vie quotidienne, de la santé à l'économie en passant par les loisirs. Elle suscite autant de fascination que de questions, surtout avec l'impact qu'elle a et continuera d'avoir sur notre société.
+                </p>
+                <p>
+                    Cet article propose de démystifier les notions clés de l'IA pour en offrir une compréhension accessible à tous les publics. Découvrez les dessous de cette technologie pour mieux comprendre comment elle fonctionne !
+                </p>
+            </section>
+
+            <section id="definition">
+                <h2>Concrètement, l'IA c'est quoi ?</h2>
+                <p>
+                    L'IA donne aux machines la capacité d'accomplir des tâches habituellement réservées à l'intelligence humaine. Elle leur permet de comprendre la parole, de prendre des décisions complexes et de résoudre des problèmes sophistiqués<sup>[1]</sup>. Pour y parvenir, elle mobilise différentes technologies qui permettent aux machines de traiter l'information, d'apprendre et d'interagir de manière autonome.
+                </p>
+                <h3>Les grands principes de l'IA</h3>
+                <p>
+                    Les technologies qui alimentent l'IA reposent sur des modèles mathématiques, des statistiques avancées et des algorithmes sophistiqués. L'objectif : permettre aux machines de traiter de vastes quantités de données pour « apprendre » et faire des prédictions<sup>[1]</sup>. Cet apprentissage se fait en analysant des schémas récurrents, améliorant ainsi les performances au fil du temps.
+                </p>
+                <p>
+                    Pour mieux comprendre l'IA d'aujourd'hui, vous pouvez découvrir son évolution depuis les années 50 dans notre premier article.
+                </p>
+            </section>
+
+            <section id="technologies">
+                <!-- Contenu de la section technologies -->
+            </section>
+
+            <div class="timeline-visualization">
+                <h3>L'évolution de l'intelligence artificielle en un coup d'œil</h3>
+                <img src="../assets/img/time-ia.svg" alt="Frise chronologique de l'évolution de l'intelligence artificielle, de Turing à nos jours" class="timeline-image">
+            </div>
+
+            <section id="quotidien">
+                <!-- Contenu de la section quotidien -->
+            </section>
+
+            <section id="defis">
+                <!-- Contenu de la section défis -->
+            </section>
+
+            <div class="learn-more">
+                <h3>Sources</h3>
+                <ol>
+                    <li id="ref1"><a href="https://www.obvia.ca/sites/obvia.ca/files/ressources/202409-OBV-Pub-Abecedaire_IA_1.pdf" target="_blank">OBVIA - Abécédaire de l'IA</a></li>
+                    <li id="ref2"><a href="https://medium.com/@eytanmessika/intelligence-artificielle-1o1-tout-comprendre-sur-ce-d%C3%A9lire-dia-cb8402e253bb" target="_blank">Eytan Messika, « Intelligence Artificielle 101 »</a></li>
+                    <li id="ref3"><a href="https://bigmedia.bpifrance.fr/news/intelligence-artificielle-generative-de-quoi-parle-t" target="_blank">Bpifrance - IA Générative : Nouvelles perspectives</a></li>
+                    <li id="ref4"><a href="https://www.rfi.fr/fr/podcasts/les-dessous-de-l-infox/20230616-l-usage-grand-public-des-ia-g%C3%A9n%C3%A9ratives-et-les-manipulations-de-l-information" target="_blank">RFI - Manipulations et usages publics des IA</a></li>
+                </ol>
             </div>
         </div>
-        <div class="copyright">
-            <p>&copy; 2024 AZY Solutions. Tous droits réservés.</p>
-        </div>
-    </footer>
-
-    <script src="../scripts/script.js"></script>
-</body>
-</html>
+    </div>
+</main>
