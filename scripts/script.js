@@ -37,6 +37,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
             nav.classList.remove('active');
         }
     });
+
+    document.querySelectorAll('.sidebar a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            const offset = 80;
+            const sectionPosition = targetSection.offsetTop - offset;
+
+            window.scrollTo({
+                top: sectionPosition,
+                behavior: 'smooth'
+            });
+        });
+    });
+
 });
 
 document.addEventListener('DOMContentLoaded', function() {
