@@ -432,12 +432,16 @@ img.blog-compact-image {
     .blog-compact-article:nth-child(even) {
         grid-template-columns: 1fr;
     }
+
     .blog-featured-image,
     .blog-compact-image {
         height: 200px;
     }
-}
 
+    .blog-featured-image {
+        width: 100%;
+    }
+}
 /* Post Hero */
 
 .breadcrumb {
