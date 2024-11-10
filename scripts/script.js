@@ -37,6 +37,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
             nav.classList.remove('active');
         }
     });
+
+    document.querySelectorAll('.sidebar a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            const offset = 80;
+            const sectionPosition = targetSection.offsetTop - offset;
+
+            window.scrollTo({
+                top: sectionPosition,
+                behavior: 'smooth'
+            });
+        });
+    });
+
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -118,7 +136,7 @@ document.addEventListener('alpine:init', () => {
         featuredArticle: {
             title: "De Turing à ChatGPT : L’évolution fascinante de l’intelligence artificielle",
             description: "Vous ne l’avez peut-être pas remarqué, mais l’intelligence artificielle s’est infiltrée partout dans notre quotidien. Elle suggère vos prochaines séries sur Netflix, pilote les voitures autonomes, détecte les fraudes bancaires et aide même les médecins à diagnostiquer des maladies.",
-            image: "assets/img/Frame1.png",
+            image: "assets/img/article1.png",
             category: "Intelligence Artificielle",
             date: "2024-11-05",
             readTime: 8,
@@ -129,28 +147,28 @@ document.addEventListener('alpine:init', () => {
                 id: 2,
                 title: "Comprendre l’IA de A à Z : les notions clés de l’intelligence artificielle expliquées.",
                 description: "Vous entendez parler d'IA tous les jours, mais savez-vous vraiment comment elle fonctionne ? Des assistants vocaux aux voitures autonomes, en passant par la détection de fraudes bancaires... L'IA est partout !",
-                image: "assets/img/Frame1.png",
-                category: "Cloud",
+                image: "assets/img/article2.webp",
+                category: "Intelligence Artificielle",
                 date: "2024-11-07",
                 readTime: 6,
                 url: "posts/post-example.html"
             },
             {
                 id: 3,
-                title: "Sécurité web : protégez votre application",
-                description: "Apprenez à sécuriser efficacement votre site web contre les cyberattaques avec ces techniques éprouvées par les experts.",
-                image: "assets/img/Frame1.png",
-                category: "Sécurité",
+                title: "De l'e-commerce à l'agriculture : 8 secteurs transformés par l'intelligence artificielle",
+                description: "L'intelligence artificielle (IA) s'intègre de plus en plus dans nos vies quotidiennes et transforme déjà de nombreux secteurs, de la finance à la santé, en passant par l'agriculture.",
+                image: "assets/img/article3.png",
+                category: "Intelligence Artificielle",
                 date: "2024-11-08",
                 readTime: 7,
                 url: "posts/post-example.html"
             },
             {
                 id: 4,
-                title: "L'essor du développement mobile en 2024",
-                description: "Découvrez les technologies émergentes et les stratégies gagnantes pour créer des applications mobiles performantes.",
-                image: "assets/img/Frame1.png",
-                category: "Mobile",
+                title: "IA au quotidien : Comment l’intelligence artificielle transforme notre vie de tous les jours",
+                description: "'Alexa, quelle est la météo aujourd\'hui ?' 'Siri, règle une alarme pour 7h demain.' Ces phrases, vous les avez peut-être déjà prononcées au moins une fois. Ce que vous ne savez peut-être pas, c\'est que derrière ces interactions se cache une technologie sophistiquée : l\'intelligence artificielle.",
+                image: "assets/img/article4.jpg",
+                category: "Intelligence Artificielle",
                 date: "2024-11-09",
                 readTime: 4,
                 url: "posts/post-example.html"
@@ -160,19 +178,9 @@ document.addEventListener('alpine:init', () => {
                 title: "Homme vs Machine : l’IA peut-elle vraiment surpasser l’intelligence humaine ?",
                 description: "Avec des avancées impressionnantes comme la victoire d’AlphaGo contre le champion Lee Sedol en 2016, l’intelligence artificielle semble franchir des barrières autrefois réservées à l’intuition et à la créativité humaines. .",
                 image: "assets/img/article_5.jpg",
-                category: "Data Science",
+                category: "Intelligence Artificielle",
                 date: "2024-10-27",
                 readTime: 9,
-                url: "posts/post-example.html"
-            },
-            {
-                id: 6,
-                title: "L'art de l'UX Writing",
-                description: "Apprenez à rédiger des textes d'interface efficaces qui améliorent l'expérience utilisateur et augmentent les conversions.",
-                image: "assets/img/Frame1.png",
-                category: "Design",
-                date: "2024-10-26",
-                readTime: 5,
                 url: "posts/post-example.html"
             },
         ],
