@@ -148,7 +148,7 @@ document.addEventListener('alpine:init', () => {
                 title: "Comprendre l’IA de A à Z : les notions clés de l’intelligence artificielle expliquées.",
                 description: "Vous entendez parler d'IA tous les jours, mais savez-vous vraiment comment elle fonctionne ? Des assistants vocaux aux voitures autonomes, en passant par la détection de fraudes bancaires... L'IA est partout !",
                 image: "assets/img/article2.webp",
-                category: "Cloud",
+                category: "Intelligence Artificielle",
                 date: "2024-11-07",
                 readTime: 6,
                 url: "posts/post-example.html"
@@ -158,7 +158,7 @@ document.addEventListener('alpine:init', () => {
                 title: "De l'e-commerce à l'agriculture : 8 secteurs transformés par l'intelligence artificielle",
                 description: "L'intelligence artificielle (IA) s'intègre de plus en plus dans nos vies quotidiennes et transforme déjà de nombreux secteurs, de la finance à la santé, en passant par l'agriculture.",
                 image: "assets/img/article3.png",
-                category: "Sécurité",
+                category: "Intelligence Artificielle",
                 date: "2024-11-08",
                 readTime: 7,
                 url: "posts/post-example.html"
@@ -168,7 +168,7 @@ document.addEventListener('alpine:init', () => {
                 title: "IA au quotidien : Comment l’intelligence artificielle transforme notre vie de tous les jours",
                 description: "'Alexa, quelle est la météo aujourd\'hui ?' 'Siri, règle une alarme pour 7h demain.' Ces phrases, vous les avez peut-être déjà prononcées au moins une fois. Ce que vous ne savez peut-être pas, c\'est que derrière ces interactions se cache une technologie sophistiquée : l\'intelligence artificielle.",
                 image: "assets/img/article4.jpg",
-                category: "Mobile",
+                category: "Intelligence Artificielle",
                 date: "2024-11-09",
                 readTime: 4,
                 url: "posts/post-example.html"
@@ -178,19 +178,9 @@ document.addEventListener('alpine:init', () => {
                 title: "Homme vs Machine : l’IA peut-elle vraiment surpasser l’intelligence humaine ?",
                 description: "Avec des avancées impressionnantes comme la victoire d’AlphaGo contre le champion Lee Sedol en 2016, l’intelligence artificielle semble franchir des barrières autrefois réservées à l’intuition et à la créativité humaines. .",
                 image: "assets/img/article_5.jpg",
-                category: "Data Science",
+                category: "Intelligence Artificielle",
                 date: "2024-10-27",
                 readTime: 9,
-                url: "posts/post-example.html"
-            },
-            {
-                id: 6,
-                title: "L'art de l'UX Writing",
-                description: "Apprenez à rédiger des textes d'interface efficaces qui améliorent l'expérience utilisateur et augmentent les conversions.",
-                image: "assets/img/Frame1.png",
-                category: "Design",
-                date: "2024-10-26",
-                readTime: 5,
                 url: "posts/post-example.html"
             },
         ],
