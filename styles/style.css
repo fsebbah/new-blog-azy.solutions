@@ -266,7 +266,7 @@ nav a {
 }
 .blog-featured-image {
     width: 50rem;
-    height: 24rem;
+    height: auto;
     object-fit: cover;
 }
 .blog-featured-content {
