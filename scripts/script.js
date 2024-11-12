@@ -151,7 +151,7 @@ document.addEventListener('alpine:init', () => {
                 category: "Intelligence Artificielle",
                 date: "2024-11-07",
                 readTime: 6,
-                url: "posts/post-example.html"
+                url: "posts/comprendre-l-ia-de-a-a-z.html"
             },
             {
                 id: 3,
@@ -161,7 +161,7 @@ document.addEventListener('alpine:init', () => {
                 category: "Intelligence Artificielle",
                 date: "2024-11-08",
                 readTime: 7,
-                url: "posts/post-example.html"
+                url: "posts/de-l-e-commerce-a-l-agriculture.html"
             },
             {
                 id: 4,
@@ -171,7 +171,7 @@ document.addEventListener('alpine:init', () => {
                 category: "Intelligence Artificielle",
                 date: "2024-11-09",
                 readTime: 4,
-                url: "posts/post-example.html"
+                url: "posts/ia-au-quotidien.html"
             },
             {
                 id: 5,
@@ -181,7 +181,7 @@ document.addEventListener('alpine:init', () => {
                 category: "Intelligence Artificielle",
                 date: "2024-10-27",
                 readTime: 9,
-                url: "posts/post-example.html"
+                url: "posts/homme-vs-machine.html"
             },
         ],
         visibleCount: 4,

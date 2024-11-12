@@ -247,6 +247,9 @@ nav a {
         width: 200px;
         height: 200px;
     }
+    .logo img{
+        height: 1.1rem;
+    }
 }
 
 /* Generative blog post */
@@ -541,6 +544,10 @@ h1 {
     padding-left: 0;
     max-width: 42rem;
     margin-bottom: 8rem;
+}
+.main-content a {
+    color: black;
+    text-decoration: underline;
 }
 .highlight-box {
     background-color: #FDF0FF;
