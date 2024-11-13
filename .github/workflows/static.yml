@@ -57,9 +57,24 @@ jobs:
           find . -name "*.html" -exec sed -i "s|__SITE_URL__|$SITE_URL|g" {} +
           find . -name "*.html" -exec sed -i "s|__SITE_BLOG_URL__|$SITE_BLOG_URL|g" {} +
 
-      - name: Install minimization tools
+      # - name: Install minimization tools
+      #   run: |
+      #     npm install terser cssnano-cli html-minifier
+
+      - name: Check script.js existence
         run: |
-          npm install terser cssnano-cli html-minifier
+          if [ -f ./scripts/script.js ]; then
+            echo "script.js found."
+          else
+            echo "script.js not found."
+            exit 1
+          fi
+        
+      - name: Debug installed packages
+        run: |
+          npm list terser
+          npm list cssnano-cli
+          npm list html-minifier
 
       - name: Minify JavaScript
         run: |
