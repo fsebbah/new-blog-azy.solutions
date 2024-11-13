@@ -78,11 +78,11 @@ jobs:
 
       - name: Minify JavaScript
         run: |
-          terser ./scripts/script.js -o ./scripts/script.min.js --compress --mangle
+          npx terser ./scripts/script.js -o ./scripts/script.min.js --compress --mangle
   
       - name: Minify CSS
         run: |
-          cssnano ./styles/style.css ./styles/style.min.css
+          npx cssnano ./styles/style.css ./styles/style.min.css
 
       - name: Minify HTML
         run: |
