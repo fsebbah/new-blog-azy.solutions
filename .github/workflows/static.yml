@@ -112,6 +112,24 @@ jobs:
             echo "style.css successfully removed"
           fi
   
+      - name: Verify script.min.js exists
+        run: |
+          if [ -f ./scripts/script.min.js ]; then
+            echo "Success: script.min.js exists!!!"
+            exit 1
+          else
+            echo "Error: script.min.js doesnt exist."
+          fi
+  
+      - name: Verify style.min.css exists
+        run: |
+          if [ -f ./styles/style.min.css ]; then
+            echo ": Success style.min.css exists!!!"
+            exit 1
+          else
+            echo "Error style.min.css doesnt exist."
+          fi
+
       - name: Update HTML references to minified files
         run: |
           find . -name "*.html" -exec sed -i 's|/scripts/script.js|/scripts/script.min.js|g' {} +
