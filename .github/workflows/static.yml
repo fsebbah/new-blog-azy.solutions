@@ -102,11 +102,6 @@ jobs:
             echo "script.js successfully removed"
           fi
 
-      - name: Update HTML references to minified files
-        run: |
-          find . -name "*.html" -exec sed -i 's|/scripts/script.js|/scripts/script.min.js|g' {} +
-          find . -name "*.html" -exec sed -i 's|/styles/style.css|/styles/style.min.css|g' {} +
-
       - name: Verify style.css removal
         run: |
           if [ -f ./styles/style.css ]; then
@@ -115,7 +110,11 @@ jobs:
           else
             echo "style.css successfully removed"
           fi
-  
+      - name: Update HTML references to minified files
+        run: |
+          find . -name "*.html" -exec sed -i 's|/scripts/script.js|/scripts/script.min.js|g' {} +
+          find . -name "*.html" -exec sed -i 's|/styles/style.css|/styles/style.min.css|g' {} +
+    
       - name: Verify script.min.js exists
         run: |
           if [ -f ./scripts/script.min.js ]; then
