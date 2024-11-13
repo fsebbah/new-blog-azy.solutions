@@ -84,16 +84,15 @@ jobs:
         run: |
           npx cssnano ./styles/style.css ./styles/style.min.css
 
-      - name: Minify HTML
+      - name: Remove CSS
+        run: |
+          rm ./styles/style.css  # Supprimer l'original
+
+      - name: Minify HTML and Remove JS
         run: |
           find . -name "*.html" -exec html-minifier --collapse-whitespace --remove-comments --minify-js true --minify-css true -o {} {} \;
           rm ./scripts/script.js  # Supprimer l'original
-
-      - name: Minify CSS
-        run: |
-          npx cssnano ./styles/style.css ./styles/style.min.css
-          rm ./styles/style.css  # Supprimer l'original
-
+  
       - name: Verify script.js removal
         run: |
           if [ -f ./scripts/script.js ]; then
@@ -102,6 +101,11 @@ jobs:
           else
             echo "script.js successfully removed"
           fi
+
+      - name: Update HTML references to minified files
+        run: |
+          find . -name "*.html" -exec sed -i 's|/scripts/script.js|/scripts/script.min.js|g' {} +
+          find . -name "*.html" -exec sed -i 's|/styles/style.css|/styles/style.min.css|g' {} +
 
       - name: Verify style.css removal
         run: |
@@ -116,24 +120,19 @@ jobs:
         run: |
           if [ -f ./scripts/script.min.js ]; then
             echo "Success: script.min.js exists!!!"
-            exit 1
           else
             echo "Error: script.min.js doesnt exist."
+            exit 1
           fi
   
       - name: Verify style.min.css exists
         run: |
           if [ -f ./styles/style.min.css ]; then
             echo ": Success style.min.css exists!!!"
-            exit 1
           else
             echo "Error style.min.css doesnt exist."
+            exit 1
           fi
-
-      - name: Update HTML references to minified files
-        run: |
-          find . -name "*.html" -exec sed -i 's|/scripts/script.js|/scripts/script.min.js|g' {} +
-          find . -name "*.html" -exec sed -i 's|/styles/style.css|/styles/style.min.css|g' {} +
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
