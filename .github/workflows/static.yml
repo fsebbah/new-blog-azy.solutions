@@ -70,16 +70,16 @@ jobs:
             exit 1
           fi
         
+      - name: Minify JavaScript
+        run: |
+          terser ./scripts/script.js -o ./scripts/script.min.js --compress --mangle
+
       - name: Debug installed packages
         run: |
           npm list terser
           npm list cssnano-cli
           npm list html-minifier
-
-      - name: Minify JavaScript
-        run: |
-          terser ./scripts/script.js -o ./scripts/script.min.js --compress --mangle
-
+  
       - name: Minify CSS
         run: |
           cssnano ./styles/style.css ./styles/style.min.css
