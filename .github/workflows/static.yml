@@ -87,12 +87,31 @@ jobs:
       - name: Minify HTML
         run: |
           find . -name "*.html" -exec html-minifier --collapse-whitespace --remove-comments --minify-js true --minify-css true -o {} {} \;
+          rm ./scripts/script.js  # Supprimer l'original
 
       - name: Minify CSS
         run: |
           npx cssnano ./styles/style.css ./styles/style.min.css
           rm ./styles/style.css  # Supprimer l'original
 
+      - name: Verify script.js removal
+        run: |
+          if [ -f ./scripts/script.js ]; then
+            echo "Error: script.js still exists"
+            exit 1
+          else
+            echo "script.js successfully removed"
+          fi
+
+      - name: Verify style.css removal
+        run: |
+          if [ -f ./styles/style.css ]; then
+            echo "Error: style.css still exists"
+            exit 1
+          else
+            echo "style.css successfully removed"
+          fi
+  
       - name: Update HTML references to minified files
         run: |
           find . -name "*.html" -exec sed -i 's|/scripts/script.js|/scripts/script.min.js|g' {} +
