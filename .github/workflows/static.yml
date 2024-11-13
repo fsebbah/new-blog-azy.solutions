@@ -48,8 +48,8 @@ jobs:
           fi
           source $GITHUB_ENV                    
           echo "Using SITE_URL: $SITE_URL"
-          sed -i "s|__SITE_URL__|$SITE_URL|g" ./index.html
-
+          find . -name "*.html" -exec sed -i "s|__SITE_URL__|$SITE_URL|g" {} +
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
