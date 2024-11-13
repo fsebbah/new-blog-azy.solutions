@@ -88,6 +88,16 @@ jobs:
         run: |
           find . -name "*.html" -exec html-minifier --collapse-whitespace --remove-comments --minify-js true --minify-css true -o {} {} \;
 
+      - name: Minify CSS
+        run: |
+          npx cssnano ./styles/style.css ./styles/style.min.css
+          rm ./styles/style.css  # Supprimer l'original
+
+      - name: Update HTML references to minified files
+        run: |
+          find . -name "*.html" -exec sed -i 's|/scripts/script.js|/scripts/script.min.js|g' {} +
+          find . -name "*.html" -exec sed -i 's|/styles/style.css|/styles/style.min.css|g' {} +
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
