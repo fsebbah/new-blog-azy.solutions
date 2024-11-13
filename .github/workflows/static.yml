@@ -1,10 +1,12 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static blog content to Pages
+# blog.azy.solutions
+
+name: Deploy static content to Pages
 
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["develop"]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -27,7 +29,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SITE_TEST_URL: "https://fsebbah.github.io/new-azy.solutions/"  # URL de test pour le blog azy.solutions
-      SITE_PROD_URL: "https://azy.solutions/"  # URL de test pour le blog azy.solutions
+      SITE_PROD_URL: "https://azy.solutions/"  # URL de production pour le blog azy.solutions
+      SITE_BLOG_PROD_URL: "https://blog.azy.solutions/"  # URL de production pour le blog azy.solutions
+      SITE_BLOG_TEST_URL: "https://fsebbah.github.io/new-blog_azy.solutions/"  # URL de production pour le blog azy.solutions
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -44,10 +48,16 @@ jobs:
           else
             echo "SITE_URL=${{ env.SITE_TEST_URL }}" >> $GITHUB_ENV
           fi
+          if [ "${{ github.ref }}" == "refs/heads/main" ]; then
+            echo "SITE_BLOG_URL=${{ env.SITE_BLOG_PROD_URL }}" >> $GITHUB_ENV
+          else
+            echo "SITE_BLOG_URL=${{ env.SITE_BLOG_TEST_URL }}" >> $GITHUB_ENV
+          fi
           source $GITHUB_ENV                    
           echo "Using SITE_URL: $SITE_URL"
-          sed -i "s|__SITE_URL__|$SITE_URL|g" ./index.html
-
+          find . -name "*.html" -exec sed -i "s|__SITE_URL__|$SITE_URL|g" {} +
+          find . -name "*.html" -exec sed -i "s|__SITE_BLOG_URL__|$SITE_BLOG_URL|g" {} +
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

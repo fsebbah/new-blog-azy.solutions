@@ -119,10 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return re.test(email);
     }
 
-    function displayError(message, element) {
-
-    }
-
     function clearErrors() {
         const errorMessages = form.querySelectorAll('.error-message');
         errorMessages.forEach(el => el.remove());
@@ -138,7 +134,7 @@ document.addEventListener('alpine:init', () => {
             description: "Vous ne l’avez peut-être pas remarqué, mais l’intelligence artificielle s’est infiltrée partout dans notre quotidien. Elle suggère vos prochaines séries sur Netflix, pilote les voitures autonomes, détecte les fraudes bancaires et aide même les médecins à diagnostiquer des maladies.",
             image: "assets/img/article1.png",
             category: "Intelligence Artificielle",
-            date: "2024-11-05",
+            date: "2024-11-18",
             readTime: 8,
             url: "posts/de-turing-a-chatgpt.html"
         },
@@ -149,7 +145,7 @@ document.addEventListener('alpine:init', () => {
                 description: "Vous entendez parler d'IA tous les jours, mais savez-vous vraiment comment elle fonctionne ? Des assistants vocaux aux voitures autonomes, en passant par la détection de fraudes bancaires... L'IA est partout !",
                 image: "assets/img/article2.webp",
                 category: "Intelligence Artificielle",
-                date: "2024-11-07",
+                date: "2024-11-19",
                 readTime: 6,
                 url: "posts/comprendre-l-ia-de-a-a-z.html"
             },
@@ -159,7 +155,7 @@ document.addEventListener('alpine:init', () => {
                 description: "L'intelligence artificielle (IA) s'intègre de plus en plus dans nos vies quotidiennes et transforme déjà de nombreux secteurs, de la finance à la santé, en passant par l'agriculture.",
                 image: "assets/img/article3.png",
                 category: "Intelligence Artificielle",
-                date: "2024-11-08",
+                date: "2024-11-20",
                 readTime: 7,
                 url: "posts/de-l-e-commerce-a-l-agriculture.html"
             },
@@ -169,9 +165,9 @@ document.addEventListener('alpine:init', () => {
                 description: "'Alexa, quelle est la météo aujourd\'hui ?' 'Siri, règle une alarme pour 7h demain.' Ces phrases, vous les avez peut-être déjà prononcées au moins une fois. Ce que vous ne savez peut-être pas, c\'est que derrière ces interactions se cache une technologie sophistiquée : l\'intelligence artificielle.",
                 image: "assets/img/article4.jpg",
                 category: "Intelligence Artificielle",
-                date: "2024-11-09",
+                date: "2024-11-21",
                 readTime: 4,
-                url: "posts/ia-au-quotidien.html"
+                url: "posts/IA-au-quotidien.html"
             },
             {
                 id: 5,
@@ -179,14 +175,26 @@ document.addEventListener('alpine:init', () => {
                 description: "Avec des avancées impressionnantes comme la victoire d’AlphaGo contre le champion Lee Sedol en 2016, l’intelligence artificielle semble franchir des barrières autrefois réservées à l’intuition et à la créativité humaines. .",
                 image: "assets/img/article_5.jpg",
                 category: "Intelligence Artificielle",
-                date: "2024-10-27",
+                date: "2024-11-22",
                 readTime: 9,
                 url: "posts/homme-vs-machine.html"
             },
         ],
+        visibleArtciles: [],
+        init(){
+            this.visibleArtciles = this.articles
+        },
+        isArticleAvailable(articleDate){
+            const today = new Date();
+            const publicationDate = new Date(articleDate);
+            return publicationDate <= today;
+        },
         visibleCount: 4,
         get visibleArticles() {
             return this.articles.slice(0, this.visibleCount);
+        },
+        formatDate(date){
+            return new Date(date).toLocaleDateString();
         },
         loadMore() {
             this.visibleCount = Math.min(this.visibleCount + 4, this.articles.length);
