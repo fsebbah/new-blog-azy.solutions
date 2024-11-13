@@ -145,7 +145,7 @@ document.addEventListener('alpine:init', () => {
                 description: "Vous entendez parler d'IA tous les jours, mais savez-vous vraiment comment elle fonctionne ? Des assistants vocaux aux voitures autonomes, en passant par la détection de fraudes bancaires... L'IA est partout !",
                 image: "assets/img/article2.webp",
                 category: "Intelligence Artificielle",
-                date: "2024-11-07",
+                date: "2024-11-18",
                 readTime: 6,
                 url: "posts/comprendre-l-ia-de-a-a-z.html"
             },
@@ -155,7 +155,7 @@ document.addEventListener('alpine:init', () => {
                 description: "L'intelligence artificielle (IA) s'intègre de plus en plus dans nos vies quotidiennes et transforme déjà de nombreux secteurs, de la finance à la santé, en passant par l'agriculture.",
                 image: "assets/img/article3.png",
                 category: "Intelligence Artificielle",
-                date: "2024-11-08",
+                date: "2024-11-19",
                 readTime: 7,
                 url: "posts/de-l-e-commerce-a-l-agriculture.html"
             },
@@ -165,7 +165,7 @@ document.addEventListener('alpine:init', () => {
                 description: "'Alexa, quelle est la météo aujourd\'hui ?' 'Siri, règle une alarme pour 7h demain.' Ces phrases, vous les avez peut-être déjà prononcées au moins une fois. Ce que vous ne savez peut-être pas, c\'est que derrière ces interactions se cache une technologie sophistiquée : l\'intelligence artificielle.",
                 image: "assets/img/article4.jpg",
                 category: "Intelligence Artificielle",
-                date: "2024-11-09",
+                date: "2024-11-20",
                 readTime: 4,
                 url: "posts/IA-au-quotidien.html"
             },
@@ -175,7 +175,7 @@ document.addEventListener('alpine:init', () => {
                 description: "Avec des avancées impressionnantes comme la victoire d’AlphaGo contre le champion Lee Sedol en 2016, l’intelligence artificielle semble franchir des barrières autrefois réservées à l’intuition et à la créativité humaines. .",
                 image: "assets/img/article_5.jpg",
                 category: "Intelligence Artificielle",
-                date: "2024-10-27",
+                date: "2024-11-21",
                 readTime: 9,
                 url: "posts/homme-vs-machine.html"
             },
