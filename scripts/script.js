@@ -119,10 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return re.test(email);
     }
 
-    function displayError(message, element) {
-
-    }
-
     function clearErrors() {
         const errorMessages = form.querySelectorAll('.error-message');
         errorMessages.forEach(el => el.remove());
@@ -184,9 +180,21 @@ document.addEventListener('alpine:init', () => {
                 url: "posts/homme-vs-machine.html"
             },
         ],
+        visibleArtciles: [],
+        init(){
+            this.visibleArtciles = this.articles
+        },
+        isArticleAvailable(articleDate){
+            const today = new Date();
+            const publicationDate = new Date(articleDate);
+            return publicationDate <= today;
+        },
         visibleCount: 4,
         get visibleArticles() {
             return this.articles.slice(0, this.visibleCount);
+        },
+        formatDate(date){
+            return new Date(date).toLocaleDateString();
         },
         loadMore() {
             this.visibleCount = Math.min(this.visibleCount + 4, this.articles.length);
