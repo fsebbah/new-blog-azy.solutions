@@ -171,7 +171,7 @@ document.addEventListener('alpine:init', () => {
                 category: "Intelligence Artificielle",
                 date: "2024-11-09",
                 readTime: 4,
-                url: "posts/ia-au-quotidien.html"
+                url: "posts/IA-au-quotidien.html"
             },
             {
                 id: 5,
