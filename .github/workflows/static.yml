@@ -112,8 +112,8 @@ jobs:
           fi
       - name: Update HTML references to minified files
         run: |
-          find . -name "*.html" -exec sed -i 's|/scripts/script.js|/scripts/script.min.js|g' {} +
-          find . -name "*.html" -exec sed -i 's|/styles/style.css|/styles/style.min.css|g' {} +
+          find . -name "*.html" -exec sed -i 's|scripts/script.js|scripts/script.min.js|g' {} +
+          find . -name "*.html" -exec sed -i 's|styles/style.css|styles/style.min.css|g' {} +
     
       - name: Verify script.min.js exists
         run: |
