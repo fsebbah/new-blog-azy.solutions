@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog AZY Solutions | L'IA de A à Z pour votre productivité</title>
+    <meta name="description" content="Découvrez les dernières innovations en IA et productivité pour transformer votre quotidien professionnel. Articles, conseils et analyses sur le blog officiel d'AZY Solutions.">
+    <link rel="canonical" href="https://www.azysolutions.com/blog">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Blog AZY Solutions | L'IA de A à Z pour votre productivité">
+    <meta property="og:description" content="Innovations en IA et productivité pour transformer votre quotidien professionnel. Articles, conseils et analyses sur le blog officiel d'AZY Solutions.">
+    <meta property="og:image" content="https://www.azysolutions.com/assets/img/blog-og-image.jpg">
+    <meta property="og:url" content="https://www.azysolutions.com/blog">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AZYSolutions">
+    <link rel="alternate" type="application/rss+xml" title="Flux RSS du Blog AZY Solutions" href="https://www.azysolutions.com/blog/feed.xml">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "Blog AZY Solutions",
+            "description": "Articles sur l'IA et la productivité au travail",
+            "url": "https://www.azysolutions.com/blog",
+            "publisher": {
+                "@type": "Organization",
+                "name": "AZY Solutions",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.azysolutions.com/assets/img/azysolutions-logo.svg"
+                }
+            }
+        }
+    </script>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/images.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="__SITE_URL__"><div class="logo"><img src="assets/img/azysolutions-logo-sans-baseline.svg" alt=""></div></a>
+                <p>L’IA de A à Z &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; Blog d’Azy solutions</p>
+                <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+                <nav>
+                    <a href="#" class="btn">Retour au site</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+<!--    <div class="container">-->
+<!--        <div class="site-hero">-->
+<!--            <div class="blue-background"></div>-->
+<!--            <div class="hero-container">-->
+<!--                <div class="content">-->
+<!--                    <h1>L'IA de A à Z</h1>-->
+<!--                    <h2>Blog d'AZY Solutions</h2>-->
+<!--                    <button class="btn">M'abonner à la newsletter</button>-->
+<!--                </div>-->
+<!--                <div class="image">-->
+<!--                    <img src="assets/img/blog-hero.svg" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div x-data="blogData" class="blog-container">
+        <article class="blog-featured">
+            <img :src="featuredArticle.image" :alt="featuredArticle.title" class="blog-featured-image">
+            <div class="blog-featured-content">
+                <div>
+                    <h1 class="blog-title" x-text="featuredArticle.title"></h1>
+                    <div class="blog-meta">
+                        <span x-text="featuredArticle.category"></span>
+                        <span>•</span>
+                        <span x-text="featuredArticle.readTime + ' min de lecture'"></span>
+                    </div>
+                    <p class="blog-description" x-text="featuredArticle.description"></p>
+                </div>
+                <a :href="featuredArticle.url" class="blue-button" :aria-label="`Lire l'article ${featuredArticle.title}`">Lire l'article</a>
+            </div>
+        </article>
+
+        <div class="blog-compact-list">
+            <template x-for="(article, index) in visibleArticles" :key="article.id">
+                <article class="blog-compact-article">
+                    <img :src="article.image" :alt="article.title" class="blog-compact-image">
+                    <div class="blog-compact-content">
+                        <div>
+                            <h2 class="blog-compact-title" x-text="article.title"></h2>
+                            <div class="blog-compact-meta">
+                                <span x-text="formatDate(article.date)"></span>
+                                <span>•</span>
+                                <span x-text="article.readTime + ' min de lecture'"></span>
+                            </div>
+                            <p class="blog-compact-description" x-text="article.description"></p>
+                        </div>
+                        <a :href="article.url" class="blue-button" :aria-label="`Lire l'article ${article.title}`">Lire l'article</a>
+                    </div>
+                </article>
+            </template>
+            <button x-show="visibleArticles.length < articles.length" @click="loadMore" class="blog-compact-load-more">
+                Charger plus d'articles
+            </button>
+        </div>
+    </div>
+
+    <div id="thankYouMessage" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Merci pour votre inscription !</h5>
+                <button type="button" class="close" aria-label="Fermer" id="closePopupTks">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Nous avons bien reçu votre inscription à notre newsletter. Vous recevrez bientôt nos dernières nouvelles et offres spéciales !</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="newsletter" id="newsletter" data-aos="fade-up">
+        <div class="container">
+            <div class="col-md-6 form">
+                <p>Ne manquez pas nos dernières publications</p>
+                <h2>Inscription à la newsletter</h2>
+                <div class="form">
+                    <!-- Begin Brevo Form -->
+                    <!-- START - We recommend to place the below code in head tag of your website html  -->
+                    <style>
+                        @font-face {
+                            font-display: block;
+                            font-family: Roboto;
+                            src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+                        }
+
+                        @font-face {
+                            font-display: fallback;
+                            font-family: Roboto;
+                            font-weight: 600;
+                            src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+                        }
+
+                        @font-face {
+                            font-display: fallback;
+                            font-family: Roboto;
+                            font-weight: 700;
+                            src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+                        }
+
+                        #sib-container input:-ms-input-placeholder {
+                            text-align: left;
+                            font-family: Helvetica, sans-serif;
+                            color: #c0ccda;
+                        }
+
+                        #sib-container input::placeholder {
+                            text-align: left;
+                            font-family: Helvetica, sans-serif;
+                            color: #c0ccda;
+                        }
+
+                        .sib-form-block{
+                            margin: 0px!important;
+                            padding: 0px!important;
+                        }
+
+                        #sib-container{
+                            border: none !important;
+                            margin: 0px!important;
+                            padding: 0px!important;
+                        }
+
+                        .sib-form{
+                            padding: 0px !important;
+                            border: none !important;
+                        }
+
+                        #sib-container a {
+                            text-decoration: underline;
+                            color: #2BB2FC;
+                        }
+
+                        #email{
+                            width: 400px;
+                        }
+
+                        @media (max-width: 480px) {
+                            #email{
+                                width: 300px;
+                            }
+                        }
+
+                        @media (max-width: 320px) {
+                            #email{
+                                width: 200px;
+                            }
+                        }
+                    </style>
+                    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+                    <!--  END - We recommend to place the above code in head tag of your website html -->
+
+                    <!-- START - We recommend to place the below code where you want the form in your website html  -->
+                    <div class="sib-form" style="text-align: center;
+         background-color: #EFF2F7;                                           ">
+                        <div id="sib-form-container" class="sib-form-container">
+                            <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px; border-radius:3px; border-width:1px; border-color:#C0CCD9; border-style:solid;">
+                                <form id="sib-form" method="POST" action="https://a512c694.sibforms.com/serve/MUIFALa10NE11MXUv9HdB1x7nQdNuz6IGqdfR3LqFJwg21PAJtIBdIh07sTKadEfpB9AGYvzpKiHKeQTehsd9Exe0BMf-kxojK3Z6YDITU2AnRQ0t6k0BZ5-4lPITNnw6iHLOLczDCHcs56Aeq3ig6SoP0eTPbmw00B_JK1Bz7Vk4nJsCec1WISwlcU526qbSAOcI0specsqksVW">
+                                    <div style="">
+                                    </div>
+                                    <div id="email" style="padding: 8px 0;">
+                                        <div class="sib-input sib-form-block">
+                                            <div class="form__entry entry_block">
+                                                <div class="form__label-row ">
+                                                    <div class="entry__field">
+                                                        <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
+                                                    </div>
+                                                </div>
+
+                                                <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="padding: 8px 0;">
+                                        <div class="sib-optin sib-form-block" data-required="true">
+                                            <div class="form__entry entry_mcq">
+                                                <div class="form__label-row ">
+                                                    <div class="entry__choice" style="">
+                                                        <label>
+                                                            <input type="checkbox" class="input_replaced" value="1" id="OPT_IN" name="OPT_IN" required />
+                                                            <span class="checkbox checkbox_tick_positive"
+
+                                                            ></span><span style="font-size:14px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent;"><p>J'accepte les <a href="https://fsebbah.github.io/new-azy.solutions/#">termes et conditions</a>.</p><span data-required="*" style="display: inline;" class="entry__label entry__label_optin"></span></span> </label>
+                                                    </div>
+                                                </div>
+                                                <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="padding: 8px 0;">
+                                        <div class="sib-form-block" style="text-align: left">
+                                            <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#FFFFFF; background-color:#8f2d8c; border-radius:3px; border-width:0px;" form="sib-form" type="submit">
+                                                <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
+                                                    <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                                                </svg>
+                                                M&#039;INSCRIRE
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <input type="text" name="email_address_check" value="" class="input--hidden">
+                                    <input type="hidden" name="locale" value="fr">
+                                    <input type="hidden" name="html_type" value="simple">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END - We recommend to place the above code where you want the form in your website html  -->
+                    <!-- End Brevo Form -->
+                </div>
+            </div>
+            <div class="icon"></div>
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <div class="container">
+            <div class="logo"><img src="assets/img/azysolutions-logo-avec-baseline.svg" alt=""></div>
+            <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="cgu.html">Mentions légales</a></li>
+                <li><a href="cgu.html">Politique de confidentialité</a></li>
+            </ul>
+            <div class="social">
+                <a href="#" aria-label="LinkedIn">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.81297 3.79339C4.81297 4.83097 4.02294 5.67067 2.78746 5.67067C1.60012 5.67067 0.810086 4.83097 0.834536 3.79339C0.810086 2.70538 1.6001 1.89014 2.81113 1.89014C4.02292 1.89014 4.78929 2.70538 4.81297 3.79339ZM0.933867 19.2395V7.15369H4.68995V19.2387H0.933867V19.2395Z" fill="#8F2D8C"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.70089 11.0106C7.70089 9.50315 7.65123 8.218 7.60156 7.15521H10.8641L11.0375 8.81092H11.1116C11.606 8.04457 12.8414 6.88397 14.8433 6.88397C17.3142 6.88397 19.1678 8.51522 19.1678 12.0727V19.241H15.4117V12.5433C15.4117 10.9854 14.8685 9.92337 13.5092 9.92337C12.4709 9.92337 11.8535 10.6401 11.6067 11.3315C11.5074 11.5791 11.4585 11.9244 11.4585 12.2713V19.241H7.70241V11.0106H7.70089Z" fill="#8F2D8C"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Savvy Wizard</p>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

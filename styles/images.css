@@ -1,0 +1,19 @@
+.timeline-visualization {
+    margin: 3rem 0;
+    padding: 2rem 0;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.timeline-visualization h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.timeline-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}

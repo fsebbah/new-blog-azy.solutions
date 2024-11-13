@@ -1,0 +1,53 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond -->
+  <rect width="800" height="400" fill="#f8f9fa"/>
+  
+  <!-- Ligne principale -->
+  <line x1="50" y1="200" x2="750" y2="200" stroke="#2c3e50" stroke-width="4"/>
+  
+  <!-- Points chronologiques -->
+  <!-- 1950s -->
+  <circle cx="100" cy="200" r="10" fill="#3498db"/>
+  <text x="100" y="160" text-anchor="middle" font-family="Arial" font-size="14" fill="#2c3e50">1950</text>
+  <text x="100" y="140" text-anchor="middle" font-family="Arial" font-size="12" fill="#2c3e50">Test de Turing</text>
+  
+  <!-- 1956 -->
+  <circle cx="200" cy="200" r="10" fill="#3498db"/>
+  <text x="200" y="250" text-anchor="middle" font-family="Arial" font-size="14" fill="#2c3e50">1956</text>
+  <text x="200" y="270" text-anchor="middle" font-family="Arial" font-size="12" fill="#2c3e50">Conférence de Dartmouth</text>
+  
+  <!-- 1970s -->
+  <circle cx="300" cy="200" r="10" fill="#3498db"/>
+  <text x="300" y="160" text-anchor="middle" font-family="Arial" font-size="14" fill="#2c3e50">1970s</text>
+  <text x="300" y="140" text-anchor="middle" font-family="Arial" font-size="12" fill="#2c3e50">Premiers systèmes experts</text>
+  
+  <!-- 1990s -->
+  <circle cx="400" cy="200" r="10" fill="#3498db"/>
+  <text x="400" y="250" text-anchor="middle" font-family="Arial" font-size="14" fill="#2c3e50">1990s</text>
+  <text x="400" y="270" text-anchor="middle" font-family="Arial" font-size="12" fill="#2c3e50">Deep Blue</text>
+  
+  <!-- 2012 -->
+  <circle cx="500" cy="200" r="10" fill="#3498db"/>
+  <text x="500" y="160" text-anchor="middle" font-family="Arial" font-size="14" fill="#2c3e50">2012</text>
+  <text x="500" y="140" text-anchor="middle" font-family="Arial" font-size="12" fill="#2c3e50">Deep Learning</text>
+  
+  <!-- 2022 -->
+  <circle cx="600" cy="200" r="10" fill="#3498db"/>
+  <text x="600" y="250" text-anchor="middle" font-family="Arial" font-size="14" fill="#2c3e50">2022</text>
+  <text x="600" y="270" text-anchor="middle" font-family="Arial" font-size="12" fill="#2c3e50">ChatGPT</text>
+  
+  <!-- 2024 -->
+  <circle cx="700" cy="200" r="10" fill="#3498db"/>
+  <text x="700" y="160" text-anchor="middle" font-family="Arial" font-size="14" fill="#2c3e50">2024</text>
+  <text x="700" y="140" text-anchor="middle" font-family="Arial" font-size="12" fill="#2c3e50">GPT-4/Claude 3</text>
+  
+  <!-- Icônes symboliques -->
+  <g transform="translate(85,180) scale(0.03)">
+    <path d="M500 50C250 50 50 250 50 500s200 450 450 450 450-200 450-450S750 50 500 50z" fill="#2c3e50"/>
+    <!-- Symbole d'engrenage simplifié -->
+  </g>
+  
+  <!-- Titre -->
+  <text x="400" y="50" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="24" fill="#2c3e50">L'évolution de l'Intelligence Artificielle</text>
+  <text x="400" y="80" text-anchor="middle" font-family="Arial" font-size="16" fill="#666">De Turing à nos jours</text>
+</svg>
