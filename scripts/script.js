@@ -58,61 +58,61 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const popupThanks = document.getElementById('thankYouMessage');
-    const closePopupThanksBtn = document.getElementById('closePopupTks');
-    const form = document.getElementById('sib-form');
-    const thankYouModal = document.getElementById('thankYouMessage');
+    // const popupThanks = document.getElementById('thankYouMessage');
+    // const closePopupThanksBtn = document.getElementById('closePopupTks');
+    // const form = document.getElementById('sib-form');
+    // const thankYouModal = document.getElementById('thankYouMessage');
+    //
+    // closePopupThanksBtn.addEventListener('click', () => {
+    //     thankYouModal.style.display = "none";
+    // });
+    //
+    // form.addEventListener('submit', (e) => {
+    //     e.preventDefault();
+    //     if (validateForm()) {
+    //         const formData = new FormData(form);
+    //
+    //         fetch(form.action, {
+    //             method: 'POST',
+    //             mode: 'no-cors',
+    //             body: formData
+    //         })
+    //             .then(() => {
+    //                 thankYouModal.style.display = "block";
+    //                 form.reset();
+    //             })
+    //             .catch(error => {
+    //                 console.error('Error:', error);
+    //                 displayError('Une erreur est survenue lors de l\'envoi du formulaire. Veuillez réessayer.');
+    //             });
+    //     }
+    // });
 
-    closePopupThanksBtn.addEventListener('click', () => {
-        thankYouModal.style.display = "none";
-    });
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        if (validateForm()) {
-            const formData = new FormData(form);
-
-            fetch(form.action, {
-                method: 'POST',
-                mode: 'no-cors',
-                body: formData
-            })
-                .then(() => {
-                    thankYouModal.style.display = "block";
-                    form.reset();
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    displayError('Une erreur est survenue lors de l\'envoi du formulaire. Veuillez réessayer.');
-                });
-        }
-    });
-
-    function validateForm() {
-        let isValid = true;
-        const email = form.querySelector('#EMAIL');
-        const optIn = form.querySelector('#OPT_IN');
-
-        // Réinitialiser les messages d'erreur
-        clearErrors();
-
-        // Valider l'email
-        if (!email.value.trim()) {
-            displayError('Veuillez entrer votre adresse email.', email);
-            isValid = false;
-        } else if (!isValidEmail(email.value)) {
-            displayError('Veuillez entrer une adresse email valide.', email);
-            isValid = false;
-        }
-
-        // Valider l'opt-in
-        if (!optIn.checked) {
-            displayError('Veuillez accepter de recevoir nos emails.', optIn);
-            isValid = false;
-        }
-
-        return isValid;
-    }
+    // function validateForm() {
+    //     let isValid = true;
+    //     const email = form.querySelector('#EMAIL');
+    //     const optIn = form.querySelector('#OPT_IN');
+    //
+    //     // Réinitialiser les messages d'erreur
+    //     clearErrors();
+    //
+    //     // Valider l'email
+    //     if (!email.value.trim()) {
+    //         displayError('Veuillez entrer votre adresse email.', email);
+    //         isValid = false;
+    //     } else if (!isValidEmail(email.value)) {
+    //         displayError('Veuillez entrer une adresse email valide.', email);
+    //         isValid = false;
+    //     }
+    //
+    //     // Valider l'opt-in
+    //     if (!optIn.checked) {
+    //         displayError('Veuillez accepter de recevoir nos emails.', optIn);
+    //         isValid = false;
+    //     }
+    //
+    //     return isValid;
+    // }
 
     function isValidEmail(email) {
         const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
