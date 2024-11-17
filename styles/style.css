@@ -268,7 +268,6 @@ nav a {
 }
 .blog-featured-image {
     width: 50rem;
-    max-height: 28.125rem ;
     height: auto;
     object-fit: cover;
 }
@@ -339,7 +338,7 @@ nav a {
 }
 .blog-compact-article {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 3rem;
     padding-bottom: 3rem;
     position: relative;
@@ -359,7 +358,7 @@ nav a {
 
 img.blog-compact-image {
     width: 100%;
-    max-height: 18.75rem;
+    height: auto;
     object-fit: cover;
 }
 .blog-compact-meta {
