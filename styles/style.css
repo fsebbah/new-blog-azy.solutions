@@ -60,7 +60,7 @@ nav a {
 }
 .btn:hover, .btn:active {
     background: #12047B;
-    border: 3px solid white;
+    outline: 3px solid white;
     color: white;
 }
 .btn:focus {
@@ -264,7 +264,6 @@ nav a {
     margin-bottom: 3rem;
     background-color: #ffffff;
     border-radius: 0.5rem;
-    overflow: hidden;
     padding-top: 5rem;
 }
 .blog-featured-image {
@@ -273,6 +272,7 @@ nav a {
     object-fit: cover;
 }
 .blog-featured-content {
+    width: 50rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -316,6 +316,7 @@ nav a {
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
     border-radius: 0.25rem;
     font-weight: 600;
     cursor: pointer;
@@ -337,9 +338,9 @@ nav a {
 }
 .blog-compact-article {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    padding: 1rem 0;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
     position: relative;
 }
 
@@ -444,6 +445,14 @@ img.blog-compact-image {
     .blog-featured-image {
         width: 100%;
     }
+    .blog-featured-content{
+        width: 100%;
+    }
+
+    .blog-compact-article{
+        gap: 1rem;
+    }
+
 }
 /* Post Hero */
 
@@ -479,6 +488,7 @@ img.blog-compact-image {
     display: inline-block;
     border: 3px solid #8F2D8C;
     color: black;
+    background-color: #FDF4FF;
     padding: 0.3125rem 0.9375rem;
     border-radius: 20px;
     margin-bottom: 1.25rem;
