@@ -267,7 +267,7 @@ nav a {
     padding-top: 5rem;
 }
 .blog-featured-image {
-    width: 50rem;
+    width: 400px;
     height: auto;
     object-fit: cover;
 }
@@ -893,7 +893,6 @@ h2 {
     margin-top: -60px;
     width: 150px;
     height: 150px;
-    background-image: url("../assets/img/newsletter-image.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
