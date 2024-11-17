@@ -56,83 +56,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    const popupThanks = document.getElementById('thankYouMessage');
-    const closePopupThanksBtn = document.getElementById('closePopupTks');
-    const form = document.getElementById('sib-form');
-    const thankYouModal = document.getElementById('thankYouMessage');
-
-    closePopupThanksBtn.addEventListener('click', () => {
-        thankYouModal.style.display = "none";
-    });
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        if (validateForm()) {
-            const formData = new FormData(form);
-
-            fetch(form.action, {
-                method: 'POST',
-                mode: 'no-cors',
-                body: formData
-            })
-                .then(() => {
-                    thankYouModal.style.display = "block";
-                    form.reset();
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    displayError('Une erreur est survenue lors de l\'envoi du formulaire. Veuillez réessayer.');
-                });
-        }
-    });
-
-    function validateForm() {
-        let isValid = true;
-        const email = form.querySelector('#EMAIL');
-        const optIn = form.querySelector('#OPT_IN');
-
-        // Réinitialiser les messages d'erreur
-        clearErrors();
-
-        // Valider l'email
-        if (!email.value.trim()) {
-            displayError('Veuillez entrer votre adresse email.', email);
-            isValid = false;
-        } else if (!isValidEmail(email.value)) {
-            displayError('Veuillez entrer une adresse email valide.', email);
-            isValid = false;
-        }
-
-        // Valider l'opt-in
-        if (!optIn.checked) {
-            displayError('Veuillez accepter de recevoir nos emails.', optIn);
-            isValid = false;
-        }
-
-        return isValid;
-    }
-
-    function isValidEmail(email) {
-        const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-        return re.test(email);
-    }
-
-    function clearErrors() {
-        const errorMessages = form.querySelectorAll('.error-message');
-        errorMessages.forEach(el => el.remove());
-        form.querySelectorAll('[aria-invalid]').forEach(el => el.removeAttribute('aria-invalid'));
-    }
-});
-
 document.addEventListener('alpine:init', () => {
     Alpine.data('blogData', () => ({
         currentArticleIndex: 0,
         featuredArticle: {
             title: "De Turing à ChatGPT : L’évolution fascinante de l’intelligence artificielle",
             description: "Vous ne l’avez peut-être pas remarqué, mais l’intelligence artificielle s’est infiltrée partout dans notre quotidien. Elle suggère vos prochaines séries sur Netflix, pilote les voitures autonomes, détecte les fraudes bancaires et aide même les médecins à diagnostiquer des maladies.",
-            image: "assets/img/article1.png",
+            image: "assets/img/article1.webp",
             category: "Intelligence Artificielle",
             date: "2024-11-18",
             readTime: 8,
@@ -153,7 +83,7 @@ document.addEventListener('alpine:init', () => {
                 id: 3,
                 title: "De l'e-commerce à l'agriculture : 8 secteurs transformés par l'intelligence artificielle",
                 description: "L'intelligence artificielle (IA) s'intègre de plus en plus dans nos vies quotidiennes et transforme déjà de nombreux secteurs, de la finance à la santé, en passant par l'agriculture.",
-                image: "assets/img/article3.png",
+                image: "assets/img/article3.webp",
                 category: "Intelligence Artificielle",
                 date: "2024-11-20",
                 readTime: 7,
@@ -163,7 +93,7 @@ document.addEventListener('alpine:init', () => {
                 id: 4,
                 title: "IA au quotidien : Comment l’intelligence artificielle transforme notre vie de tous les jours",
                 description: "'Alexa, quelle est la météo aujourd\'hui ?' 'Siri, règle une alarme pour 7h demain.' Ces phrases, vous les avez peut-être déjà prononcées au moins une fois. Ce que vous ne savez peut-être pas, c\'est que derrière ces interactions se cache une technologie sophistiquée : l\'intelligence artificielle.",
-                image: "assets/img/article4.jpg",
+                image: "assets/img/article4.webp",
                 category: "Intelligence Artificielle",
                 date: "2024-11-21",
                 readTime: 4,
@@ -173,7 +103,7 @@ document.addEventListener('alpine:init', () => {
                 id: 5,
                 title: "Homme vs Machine : l’IA peut-elle vraiment surpasser l’intelligence humaine ?",
                 description: "Avec des avancées impressionnantes comme la victoire d’AlphaGo contre le champion Lee Sedol en 2016, l’intelligence artificielle semble franchir des barrières autrefois réservées à l’intuition et à la créativité humaines. .",
-                image: "assets/img/article_5.jpg",
+                image: "assets/img/article_5.webp",
                 category: "Intelligence Artificielle",
                 date: "2024-11-22",
                 readTime: 9,
