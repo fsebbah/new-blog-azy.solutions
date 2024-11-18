@@ -160,6 +160,17 @@ jobs:
             exit 1
           fi
 
+      # Ajoutez une étape pour vérifier l'existence du fichier JSON avant de déployer
+      - name: Verify JSON file exists
+        run: |
+          if [ -f ./assets/json/articles.json ]; then
+            echo "JSON file exists!"
+          else
+            echo "Error: JSON file missing!"
+            exit 1
+          fi
+
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
