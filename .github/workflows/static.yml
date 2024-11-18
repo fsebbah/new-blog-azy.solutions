@@ -169,7 +169,9 @@ jobs:
             echo "Error: JSON file missing!"
             exit 1
           fi
-
+      - name: List files before deployment
+        run: |
+          ls -R .      
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
