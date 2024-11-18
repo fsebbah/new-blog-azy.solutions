@@ -49,7 +49,7 @@ document.addEventListener('alpine:init', () => {
 
 (async () => {
     try {
-        const response = await fetch('/assets/json/articles.json');
+        const response = await fetch('/new-blog-azy.solutions/assets/json/articles.json');
         if (!response.ok) {
             throw new Error(`Erreur HTTP : ${response.status}`);
         }
