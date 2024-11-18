@@ -59,10 +59,16 @@ jobs:
 
       - name: Check script.js existence
         run: |
-          if [ -f ./scripts/script.js ]; then
-            echo "script.js found."
+          if [ -f ./scripts/main.js ]; then
+            echo "main.js found."
           else
-            echo "script.js not found."
+            echo "main.js not found."
+            exit 1
+          fi
+          if [ -f ./scripts/blog.js ]; then
+            echo "blog.js found."
+          else
+            echo "blog.js not found."
             exit 1
           fi
         
@@ -78,7 +84,8 @@ jobs:
 
       - name: Minify JavaScript
         run: |
-          npx terser ./scripts/script.js -o ./scripts/script.min.js --compress --mangle
+          npx terser ./scripts/main.js -o ./scripts/main.min.js --compress --mangle
+          npx terser ./scripts/blog.js -o ./scripts/blog.min.js --compress --mangle
   
       - name: Minify CSS
         run: |
@@ -91,15 +98,25 @@ jobs:
       - name: Minify HTML and Remove JS
         run: |
           find . -name "*.html" -exec html-minifier --collapse-whitespace --remove-comments --minify-js true --minify-css true -o {} {} \;
-          rm ./scripts/script.js  # Supprimer l'original
+          rm ./scripts/main.js  # Supprimer l'original
+          rm ./scripts/blog.js  # Supprimer l'original
   
-      - name: Verify script.js removal
+      - name: Verify main.js removal
         run: |
-          if [ -f ./scripts/script.js ]; then
-            echo "Error: script.js still exists"
+          if [ -f ./scripts/main.js ]; then
+            echo "Error: main.js still exists"
             exit 1
           else
-            echo "script.js successfully removed"
+            echo "main.js successfully removed"
+          fi
+
+      - name: Verify blog.js removal
+        run: |
+          if [ -f ./scripts/blog.js ]; then
+            echo "Error: blog.js still exists"
+            exit 1
+          else
+            echo "blog.js successfully removed"
           fi
 
       - name: Verify style.css removal
@@ -112,15 +129,25 @@ jobs:
           fi
       - name: Update HTML references to minified files
         run: |
-          find . -name "*.html" -exec sed -i 's|scripts/script.js|scripts/script.min.js|g' {} +
+          find . -name "*.html" -exec sed -i 's|scripts/main.js|scripts/main.min.js|g' {} +
+          find . -name "*.html" -exec sed -i 's|scripts/blog.js|scripts/blog.min.js|g' {} +
           find . -name "*.html" -exec sed -i 's|styles/style.css|styles/style.min.css|g' {} +
     
-      - name: Verify script.min.js exists
+      - name: Verify main.min.js exists
         run: |
-          if [ -f ./scripts/script.min.js ]; then
-            echo "Success: script.min.js exists!!!"
+          if [ -f ./scripts/main.min.js ]; then
+            echo "Success: main.min.js exists!!!"
           else
-            echo "Error: script.min.js doesnt exist."
+            echo "Error: main.min.js doesnt exist."
+            exit 1
+          fi
+
+      - name: Verify blog.min.js exists
+        run: |
+          if [ -f ./scripts/blog.min.js ]; then
+            echo "Success: blog.min.js exists!!!"
+          else
+            echo "Error: blog.min.js doesnt exist."
             exit 1
           fi
   
