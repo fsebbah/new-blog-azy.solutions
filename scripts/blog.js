@@ -1,70 +1,126 @@
 document.addEventListener('alpine:init', () => {
-    Alpine.data('blogData', () => ({
+    Alpine.data('blogData', (initialData = {}) => ({
         articles: [],
         featuredArticle: null,
         visibleCount: 5,
+        currentArticleId: initialData.currentArticleId || null,
         init() {
-            console.log('Initialisation de blogData...');
-            const today = new Date().toISOString().split('T')[0];
-            this.featuredArticle = this.articles.find(article => article.date === today) || null;
+            this.loadArticles();
         },
+
+        async loadArticles() {
+            try {
+                //const response = await fetch('/new-blog-azy.solutions/assets/json/articles.json');
+                const response = await fetch('/new-blog-azy.solutions/assets/json/articles.json');
+                if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
+                const articlesData  = await response.json();
+                this.updateArticles(articlesData );
+                // Stocker tous les articles d'abord
+                this.allArticles = articlesData;
+            } catch (error) {
+                console.error("Failed to load articles:", error);
+            }
+        },
+
         updateArticles(newArticles) {
-            console.log('Mise à jour des articles...');
-        
-            // Trier les articles : les plus récents en premier, les anciens en dernier
-            this.articles = newArticles.sort((a, b) => {
-                const dateA = new Date(a.date);
-                const dateB = new Date(b.date);
-                return dateA - dateB; // Plus récent en premier
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            // 1. Trouver l'article du jour pour le featured
+            this.featuredArticle = newArticles.find(article => {
+                const articleDate = new Date(article.date);
+                return articleDate.toDateString() === today.toDateString();
             });
-        
-            const today = new Date().toISOString().split('T')[0];
-        
-            // Séparer l'article du jour
-            this.featuredArticle = this.articles.find(article => article.date === today) || this.articles[0];
-        
-            // Exclure l'article vedette de la liste des articles
-            this.articles = this.articles.filter(article => article !== this.featuredArticle);
-        
-            console.log('Articles triés et mis à jour :', this.articles);
+
+            // 2. Séparer les articles restants en "passés" et "futurs"
+            const remainingArticles = newArticles.filter(article => article.id !== this.featuredArticle?.id);
+            const pastArticles = [];
+            const futureArticles = [];
+
+            remainingArticles.forEach(article => {
+                const articleDate = new Date(article.date);
+                if (articleDate < today) {
+                    pastArticles.push(article);
+                } else if (articleDate > today) {
+                    futureArticles.push(article);
+                }
+            });
+
+            // 3. Trier les articles passés (du plus récent au plus ancien)
+            pastArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            // 4. Trier les articles futurs (du plus proche au plus lointain)
+            futureArticles.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+            // 5. Combiner les deux listes : d'abord les passés, puis les futurs
+            this.articles = [...pastArticles, ...futureArticles];
+        },
+        getImagePath(imagePath) {
+            if (imagePath.startsWith('/')) {
+                return imagePath; // Déjà un chemin absolu
+            }
+            // Remonter d'un niveau depuis /posts/
+            return '../' + imagePath;
+        },
+        getRelatedArticles() {
+            // S'assurer que nous avons les articles chargés
+            if (!this.allArticles  || this.allArticles .length === 0) {
+                return [];
+            }
+
+            const totalArticles = this.allArticles.length;
+
+            // Si nous avons moins de 2 articles, retourner un tableau vide
+            if (totalArticles < 2) {
+                return [];
+            }
+
+            // Trouver l'article actuel
+            const currentArticle = this.allArticles.find(article => article.id === this.currentArticleId);
+            if (!currentArticle) {
+                return [];
+            }
+            const currentDate = new Date()
+            // Sélectionner jusqu'à 3 articles liés
+            let relatedArticles = this.allArticles
+                .filter(article => article.id !== this.currentArticleId) // Exclure l'article actuel
+                .filter(article => {
+                    // Logique pour déterminer si un article est "lié"
+                    // Ici, on peut ajouter des critères comme la catégorie, les tags, etc.
+                    return article.category === currentArticle.category;
+                })
+                .filter(article => new Date(article.date) <= currentDate)
+                .sort((a, b) => {
+                    // Trier par date, les plus récents d'abord
+                    return new Date(b.date) - new Date(a.date);
+                })
+                .slice(0, 3) // Prendre les 3 premiers articles
+                .map(article =>({
+                    ...article,
+                    image: this.getImagePath(article.image)
+                }));
+            return relatedArticles;
+        },
+        get relatedArticles(){
+            return this.getRelatedArticles(1);
         },
         get visibleArticles() {
             return this.articles.slice(0, this.visibleCount);
         },
+
         loadMore() {
             this.visibleCount = Math.min(this.visibleCount + 5, this.articles.length);
         },
+
         isArticleAvailable(articleDate) {
             const today = new Date();
-            const publicationDate = new Date(articleDate);
-            return publicationDate <= today;
+            today.setHours(0, 0, 0, 0);
+            return new Date(articleDate) <= today;
         },
+
         formatDate(dateString) {
             const options = { year: 'numeric', month: 'long', day: 'numeric' };
             return new Date(dateString).toLocaleDateString('fr-FR', options);
         }
-        
     }));
 });
-
-(async () => {
-    try {
-        const response = await fetch('/new-blog-azy.solutions/assets/json/articles.json');
-        if (!response.ok) {
-            throw new Error(`Erreur HTTP : ${response.status}`);
-        }
-        const articles = await response.json();
-        console.log('Articles chargés :', articles);
-
-        // Mettre à jour les articles dans Alpine
-        const blogContainer = document.querySelector('[x-data="blogData"]');
-        if (blogContainer) {
-            const blogData = Alpine.$data(blogContainer); // Récupère l'instance Alpine
-            blogData.updateArticles(articles);
-        } else {
-            console.error('Élément avec x-data="blogData" introuvable.');
-        }
-    } catch (error) {
-        console.error("Impossible de charger les articles :", error);
-    }
-})();

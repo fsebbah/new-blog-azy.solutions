@@ -82,17 +82,22 @@
                             <span x-text="article.readTime + ' min de lecture'"></span>
                         </div>
                         <p class="blog-compact-description" x-text="article.description"></p>
-                        <a :href="isArticleAvailable(article.date) ? article.url : '#'"
+
+                        <a x-show = "isArticleAvailable(article.date)"
+                            :href=" article.url"
                             class="blue-button"
-                            :class="{'disabled-button': !isArticleAvailable(article.date)}"
-                            :aria-label="`Lire l'article ${article.title}`"
-                            x-text="isArticleAvailable(article.date) ? 'Lire l\'article' : 'Bientôt disponible'">
+                            :aria-label="`Lire l'article ${article.title}`">
+                            Lire l'article
                         </a>
+                        <div x-show="!isArticleAvailable(article.date)" 
+                            class="tag">
+                                Bientôt disponible                            
+                        </div>
                     </div>
                 </article>
             </template>
         </div>
-            </div>
+    </div>
     
     <div id="thankYouMessage" class="modal">
         <div class="modal-content">
