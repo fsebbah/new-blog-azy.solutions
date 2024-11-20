@@ -29,6 +29,8 @@ document.addEventListener('alpine:init', () => {
         updateArticles(newArticles) {
             const today = new Date();
             today.setHours(0, 0, 0, 0);
+            console.log('BASE_URL:', BASE_URL);
+            console.log('Original articles images:', newArticles.map(a => a.image));
             const processedArticles = newArticles.map(article => ({
                 ...article,
                 image: BASE_URL+article.image
@@ -38,6 +40,7 @@ document.addEventListener('alpine:init', () => {
                 const articleDate = new Date(article.date);
                 return articleDate.toDateString() === today.toDateString();
             });
+            console.log('Processed articles images:', processedArticles.map(a => a.image));
 
             // 2. Séparer les articles restants en "passés" et "futurs"
             const remainingArticles = processedArticles.filter(article => article.id !== this.featuredArticle?.id);
