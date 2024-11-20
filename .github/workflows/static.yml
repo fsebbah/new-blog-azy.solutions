@@ -6,7 +6,7 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["develop"]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -30,7 +30,7 @@ jobs:
       SITE_TEST_URL: "https://fsebbah.github.io/new-azy.solutions/"  # URL de test pour le blog azy.solutions
       SITE_PROD_URL: "https://azy.solutions/"  # URL de production pour le blog azy.solutions
       SITE_BLOG_PROD_URL: "https://blog.azy.solutions/"  # URL de production pour le blog azy.solutions
-      SITE_BLOG_TEST_URL: "https://fsebbah.github.io/new-blog_azy.solutions/"  # URL de test pour le blog azy.solutions
+      SITE_BLOG_TEST_URL: "https://fsebbah.github.io/new-blog-azy.solutions/"  # URL de test pour le blog azy.solutions
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
