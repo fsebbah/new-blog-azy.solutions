@@ -1,0 +1,19 @@
+name: Sync to Production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the code
+      uses: actions/checkout@v3
+
+    - name: Push to Production Repository
+      run: |
+        git remote add pro https://${{ secrets.PRO_SYNC_TOKEN }}@github.com/savvy-wizard/depot-pro.git
+        git push pro main
