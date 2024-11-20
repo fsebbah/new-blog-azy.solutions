@@ -2,6 +2,10 @@ body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
     font-family: 'Inter' !important;
 }
 
+.hide-on-mobile {
+    display: none;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -312,7 +316,7 @@ nav a {
     font-weight: 500;
 }
 .blue-button {
-    background-color: #493AB8;
+    background-color: #422CE8;
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -493,6 +497,7 @@ img.blog-compact-image {
     border-radius: 20px;
     margin-bottom: 1.25rem;
     margin-top: 1rem;
+    width:fit-content;
 }
 h1 {
     font-size: 2.75rem;
@@ -575,7 +580,6 @@ h1 {
 }
 h2 {
     color: #333;
-    line-height: 1.4;
 }
 .illustration {
     text-align: center;
@@ -606,17 +610,17 @@ h2 {
 }
 .related-articles {
     background-color: #F3F4FB;
-    padding: 8rem 0;
+    padding: 4rem 0;
 }
 .related-articles h2 {
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.5rem;
     margin-top: 0rem;
 }
 .article-grid {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.25rem;
@@ -634,7 +638,7 @@ h2 {
     object-fit: cover;
 }
 .article-card .content {
-    padding: 1.25rem;
+    padding: 1.5rem;
 }
 .article-card h3 {
     margin-top: 0;
@@ -644,7 +648,8 @@ h2 {
 .article-card p {
     color: #666;
     font-size: 0.875rem;
-    margin-bottom: 0;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
 }
 .newsletter-section {
     background-color: #ffffff;
@@ -975,7 +980,7 @@ footer .copyright {
         border: none;
     }
     .hide-on-mobile{
-        display: none;
+        display: inline;
     }
 }
 
