@@ -62,7 +62,7 @@ document.addEventListener('alpine:init', () => {
             // Remonter d'un niveau depuis /posts/
             return '../' + imagePath;
         },
-        getRelatedArticles() {
+        getRelatedArticles: () => {
             // S'assurer que nous avons les articles chargés
             if (!this.allArticles  || this.allArticles .length === 0) {
                 return [];
