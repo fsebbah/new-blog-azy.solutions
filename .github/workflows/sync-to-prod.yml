@@ -15,5 +15,5 @@ jobs:
 
     - name: Push to Production Repository
       run: |
-        git remote add pro https://${{ secrets.PRO_SYNC_TOKEN }}@github.com/savvy-wizard/depot-pro.git
+        git remote add pro https://${{ secrets.PRO_SYNC_TOKEN }}@github.com/savvy-wizard/blog.azy.solutions.git
         git push pro main
