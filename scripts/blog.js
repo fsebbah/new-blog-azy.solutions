@@ -40,7 +40,7 @@ document.addEventListener('alpine:init', () => {
             });
 
             // 2. Séparer les articles restants en "passés" et "futurs"
-            const remainingArticles = newArticles.filter(article => article.id !== this.featuredArticle?.id);
+            const remainingArticles = processedArticles.filter(article => article.id !== this.featuredArticle?.id);
             const pastArticles = [];
             const futureArticles = [];
 
