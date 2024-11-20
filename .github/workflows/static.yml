@@ -18,7 +18,6 @@ permissions:
   id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -31,7 +30,7 @@ jobs:
       SITE_TEST_URL: "https://fsebbah.github.io/new-azy.solutions/"  # URL de test pour le blog azy.solutions
       SITE_PROD_URL: "https://azy.solutions/"  # URL de production pour le blog azy.solutions
       SITE_BLOG_PROD_URL: "https://blog.azy.solutions/"  # URL de production pour le blog azy.solutions
-      SITE_BLOG_TEST_URL: "https://fsebbah.github.io/new-blog-azy.solutions/"  # URL de production pour le blog azy.solutions
+      SITE_BLOG_TEST_URL: "https://fsebbah.github.io/new-blog-azy.solutions/"  # URL de test pour le blog azy.solutions
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -57,12 +56,129 @@ jobs:
           echo "Using SITE_URL: $SITE_URL"
           find . -name "*.html" -exec sed -i "s|__SITE_URL__|$SITE_URL|g" {} +
           find . -name "*.html" -exec sed -i "s|__SITE_BLOG_URL__|$SITE_BLOG_URL|g" {} +
-          
+
+      - name: Check script.js existence
+        run: |
+          if [ -f ./scripts/main.js ]; then
+            echo "main.js found."
+          else
+            echo "main.js not found."
+            exit 1
+          fi
+          if [ -f ./scripts/blog.js ]; then
+            echo "blog.js found."
+          else
+            echo "blog.js not found."
+            exit 1
+          fi
+        
+      - name: Install minimization tools
+        run: |
+          npm install terser cssnano-cli html-minifier --save-dev
+
+      - name: Debug installed packages
+        run: |
+          npm list terser
+          npm list cssnano-cli
+          npm list html-minifier
+
+      - name: Minify JavaScript
+        run: |
+          npx terser ./scripts/main.js -o ./scripts/main.min.js --compress --mangle
+          npx terser ./scripts/blog.js -o ./scripts/blog.min.js --compress --mangle
+  
+      - name: Minify CSS
+        run: |
+          npx cssnano ./styles/style.css ./styles/style.min.css
+
+      - name: Remove CSS
+        run: |
+          rm ./styles/style.css  # Supprimer l'original
+
+      - name: Minify HTML and Remove JS
+        run: |
+          find . -name "*.html" -exec html-minifier --collapse-whitespace --remove-comments --minify-js true --minify-css true -o {} {} \;
+          rm ./scripts/main.js  # Supprimer l'original
+          rm ./scripts/blog.js  # Supprimer l'original
+  
+      - name: Verify main.js removal
+        run: |
+          if [ -f ./scripts/main.js ]; then
+            echo "Error: main.js still exists"
+            exit 1
+          else
+            echo "main.js successfully removed"
+          fi
+
+      - name: Verify blog.js removal
+        run: |
+          if [ -f ./scripts/blog.js ]; then
+            echo "Error: blog.js still exists"
+            exit 1
+          else
+            echo "blog.js successfully removed"
+          fi
+
+      - name: Verify style.css removal
+        run: |
+          if [ -f ./styles/style.css ]; then
+            echo "Error: style.css still exists"
+            exit 1
+          else
+            echo "style.css successfully removed"
+          fi
+      - name: Update HTML references to minified files
+        run: |
+          find . -name "*.html" -exec sed -i 's|scripts/main.js|scripts/main.min.js|g' {} +
+          find . -name "*.html" -exec sed -i 's|scripts/blog.js|scripts/blog.min.js|g' {} +
+          find . -name "*.html" -exec sed -i 's|styles/style.css|styles/style.min.css|g' {} +
+    
+      - name: Verify main.min.js exists
+        run: |
+          if [ -f ./scripts/main.min.js ]; then
+            echo "Success: main.min.js exists!!!"
+          else
+            echo "Error: main.min.js doesnt exist."
+            exit 1
+          fi
+
+      - name: Verify blog.min.js exists
+        run: |
+          if [ -f ./scripts/blog.min.js ]; then
+            echo "Success: blog.min.js exists!!!"
+          else
+            echo "Error: blog.min.js doesnt exist."
+            exit 1
+          fi
+  
+      - name: Verify style.min.css exists
+        run: |
+          if [ -f ./styles/style.min.css ]; then
+            echo ": Success style.min.css exists!!!"
+          else
+            echo "Error style.min.css doesnt exist."
+            exit 1
+          fi
+
+      # Ajoutez une étape pour vérifier l'existence du fichier JSON avant de déployer
+      - name: Verify JSON file exists
+        run: |
+          if [ -f ./assets/json/articles.json ]; then
+            echo "JSON file exists!"
+          else
+            echo "Error: JSON file missing!"
+            exit 1
+          fi
+      - name: List files before deployment
+        run: |
+          ls -R .      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
+          # Upload entire repository, now minimized
           path: '.'
+          
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
