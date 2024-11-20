@@ -52,7 +52,7 @@
                 <div class="content">
                     <div class="tag">Intelligence Artificielle</div>
 
-                    <h1>Comprendre l'IA de A à Z&nbsp;: les notions clés de l'intelligence artificielle expliquées</h1>
+                    <h2>Comprendre l'IA de A à Z&nbsp;: les notions clés de l'intelligence artificielle expliquées</h2>
                     <p class="meta">15 minutes de lecture  <span>•</span> Publié le 12/11/2024</p>
                 </div>
 
@@ -188,9 +188,7 @@
         </main>
     </div>
 
-    <template x-data="blogData" class="related-articles" x-show="relatedArticles(1).length > 0">
-        <h2>Autres articles sur le même thème</h2>
-
+    <template x-if="articles.length > 0">
         <div class="article-grid">
             <template x-for="article in relatedArticles(1)" :key="article.id">
                 <div class="article-card">
@@ -198,7 +196,7 @@
                     <div class="content">
                         <h3 x-text="article.title"></h3>
                         <p x-text="article.description"></p>
-                        <a href="#" class="read-more">
+                        <a :href="article.url" class="read-more">
                             Lire l'article
                         </a>
                     </div>
@@ -206,7 +204,7 @@
             </template>
         </div>
     </template>
-
+    
     <div id="thankYouMessage" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -384,6 +382,7 @@
         </div>
     </footer>
 
-    <script src="../scripts/script.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/blog.js"></script>
 </body>
 </html>
