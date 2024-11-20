@@ -45,15 +45,15 @@
 
     <div class="container">
         <div class="breadcrumb">
-            <a href="#">Blog</a> <strong>/ De l'e-commerce à l'agriculture</strong>
+            <a href="__SITE_BLOG_URL__">Blog</a> <strong>/ De l'e-commerce à l'agriculture</strong>
         </div>
         <main>
             <div class="post-hero">
                 <div class="content">
                     <div class="tag">Intelligence Artificielle</div>
 
-                    <h1>De l'e-commerce à l'agriculture&nbsp;: 8 secteurs transformés par l'intelligence artificielle</h1>
-                    <p class="meta">15 minutes de lecture  <span>•</span> Publié le 12/11/2024</p>
+                    <h2>De l'e-commerce à l'agriculture&nbsp;: 8 secteurs transformés par l'intelligence artificielle</h2>
+                    <p class="meta">15 minutes de lecture  <span>•</span> Publié le 20/11/2024</p>
                 </div>
 
                 <div class="post-hero-image">
@@ -207,13 +207,15 @@
         </main>
     </div>
 
-    <template x-data="blogData" class="related-articles" x-show="relatedArticles(1).length > 0">
+    <div x-data="blogData({currentArticleId:3})" 
+        class="related-articles"
+         x-show="getRelatedArticles().length > 0">
         <h2>Autres articles sur le même thème</h2>
 
-        <div class="article-grid">
-            <template x-for="article in relatedArticles(1)" :key="article.id">
+        <div class="article-grid">  
+            <template x-for="article in getRelatedArticles()" :key="article.id">
                 <div class="article-card">
-                    <img :src="article.image" :alt="article.title">
+                    <img :src="getImagePath(article.image)" :alt="article.title">
                     <div class="content">
                         <h3 x-text="article.title"></h3>
                         <p x-text="article.description"></p>
@@ -224,7 +226,7 @@
                 </div>
             </template>
         </div>
-    </template>
+    </div>
 
     <div id="thankYouMessage" class="modal">
         <div class="modal-content">
@@ -403,6 +405,7 @@
         </div>
     </footer>
 
-    <script src="../scripts/script.js"></script>
+    <script src="../scripts/blog.js"></script>
+    <script src="../scripts/main.js"></script>
 </body>
 </html>

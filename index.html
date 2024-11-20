@@ -51,10 +51,13 @@
     </header>
 
     <div x-data="blogData" class="blog-container">
-        <article class="blog-featured">
-            <img :src="featuredArticle.image" :alt="featuredArticle.title" class="blog-featured-image">
-            <div class="blog-featured-content">
-                <div>
+        <template x-if="!featuredArticle">
+            <p>Chargement en cours...</p>
+        </template>
+        <template x-if="featuredArticle">
+            <article class="blog-featured">
+                <img :src="featuredArticle.image" :alt="featuredArticle.title" class="blog-featured-image">
+                <div class="blog-featured-content">
                     <h1 class="blog-title" x-text="featuredArticle.title"></h1>
                     <div class="blog-meta">
                         <span x-text="featuredArticle.category"></span>
@@ -62,41 +65,40 @@
                         <span x-text="featuredArticle.readTime + ' min de lecture'"></span>
                     </div>
                     <p class="blog-description" x-text="featuredArticle.description"></p>
+                    <a :href="featuredArticle.url" class="blue-button" :aria-label="`Lire l'article ${featuredArticle.title}`">Lire l'article</a>
                 </div>
-                <a :href="featuredArticle.url" class="blue-button" :aria-label="`Lire l'article ${featuredArticle.title}`">Lire l'article</a>
-            </div>
-        </article>
-
+            </article>
+        </template>
+    
         <div class="blog-compact-list">
             <template x-for="(article, index) in visibleArticles" :key="article.id">
                 <article class="blog-compact-article">
                     <img :src="article.image" :alt="article.title" class="blog-compact-image">
                     <div class="blog-compact-content">
-                        <div>
-                            <h2 class="blog-compact-title" x-text="article.title"></h2>
-                            <div class="blog-compact-meta">
-                                <span x-text="formatDate(article.date)"></span>
-                                <span>•</span>
-                                <span x-text="article.readTime + ' min de lecture'"></span>
-                            </div>
-                            <p class="blog-compact-description" x-text="article.description"></p>
+                        <h2 class="blog-compact-title" x-text="article.title"></h2>
+                        <div class="blog-compact-meta">
+                            <span x-text="formatDate(article.date)"></span>
+                            <span>•</span>
+                            <span x-text="article.readTime + ' min de lecture'"></span>
                         </div>
-                        <a :href="isArticleAvailable(article.date) ? article.url : '#'"
+                        <p class="blog-compact-description" x-text="article.description"></p>
+
+                        <a x-show = "isArticleAvailable(article.date)"
+                            :href=" article.url"
                             class="blue-button"
-                            :class="{'disabled-button': !isArticleAvailable(article.date)}"
-                            :aria-label="`Lire l'article ${article.title}`"
-                            x-text="isArticleAvailable(article.date) ? 'Lire l\'article' : 'Bientôt disponible'">
+                            :aria-label="`Lire l'article ${article.title}`">
+                            Lire l'article
                         </a>
-                        <!-- <a :href="article.url" class="blue-button" :aria-label="`Lire l'article ${article.title}`">Lire l'article</a> -->
+                        <div x-show="!isArticleAvailable(article.date)" 
+                            class="tag">
+                                Bientôt disponible                            
+                        </div>
                     </div>
                 </article>
             </template>
-            <button x-show="visibleArticles.length < articles.length" @click="loadMore" class="blog-compact-load-more">
-                Charger plus d'articles
-            </button>
         </div>
     </div>
-
+    
     <div id="thankYouMessage" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -274,6 +276,7 @@
         </div>
     </footer>
 
-    <script src="scripts/script.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/blog.js"></script>
 </body>
 </html>
