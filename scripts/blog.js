@@ -1,3 +1,7 @@
+const BASE_URL = window.location.hostname.includes('github.io') 
+    ? '/new-blog-azy.solutions'
+    : '';
+
 document.addEventListener('alpine:init', () => {
     Alpine.data('blogData', (initialData = {}) => ({
         articles: [],
@@ -11,7 +15,7 @@ document.addEventListener('alpine:init', () => {
         async loadArticles() {
             try {
                 //const response = await fetch('/new-blog-azy.solutions/assets/json/articles.json');
-                const response = await fetch('/new-blog-azy.solutions/assets/json/articles.json');
+                const response = await fetch(BASE_URL+ '/assets/json/articles.json');
                 if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
                 const articlesData  = await response.json();
                 this.updateArticles(articlesData );
@@ -25,9 +29,12 @@ document.addEventListener('alpine:init', () => {
         updateArticles(newArticles) {
             const today = new Date();
             today.setHours(0, 0, 0, 0);
-
+            const processedArticles = newArticles.map(article => ({
+                ...article,
+                image: BASE_URL+article.image
+            }));
             // 1. Trouver l'article du jour pour le featured
-            this.featuredArticle = newArticles.find(article => {
+            this.featuredArticle = processedArticles.find(article => {
                 const articleDate = new Date(article.date);
                 return articleDate.toDateString() === today.toDateString();
             });

@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebarLinks = document.querySelectorAll('.sidebar a');
     const sections = document.querySelectorAll('section');
     const sidebar = document.querySelector('.sidebar');
-
+    const BASE_URL = window.location.hostname.includes('github.io') 
+    ? '/new-blog-azy.solutions'
+    : '';
     // Toggle menu mobile
     menuToggle.addEventListener('click', () => {
         nav.classList.toggle('active');
