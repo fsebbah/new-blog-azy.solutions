@@ -6,7 +6,7 @@
     "image": "/assets/img/article1.webp",
     "category": "Intelligence Artificielle",
     "date": "2024-11-18",
-    "readTime": 8,
+    "readTime": 5,
     "url": "posts/de-turing-a-chatgpt.html"
 },
     {
@@ -16,7 +16,7 @@
         "image": "/assets/img/article2.webp",
         "category": "Intelligence Artificielle",
         "date": "2024-11-19",
-        "readTime": 6,
+        "readTime": 5,
         "url": "posts/comprendre-l-ia-de-a-a-z.html"
     },
     {
@@ -26,7 +26,7 @@
         "image": "/assets/img/article3.webp",
         "category": "Intelligence Artificielle",
         "date": "2024-11-20",
-        "readTime": 7,
+        "readTime": 5,
         "url": "posts/de-l-e-commerce-a-l-agriculture.html"
     },
     {
@@ -36,7 +36,7 @@
         "image": "/assets/img/article4.webp",
         "category": "Intelligence Artificielle",
         "date": "2024-11-21",
-        "readTime": 4,
+        "readTime": 5,
         "url": "posts/IA-au-quotidien.html"
     },
     {
@@ -46,7 +46,7 @@
         "image": "/assets/img/article_5.webp",
         "category": "Intelligence Artificielle",
         "date": "2024-11-22",
-        "readTime": 9,
+        "readTime": 5,
         "url": "posts/homme-vs-machine.html"
     }
 ]
