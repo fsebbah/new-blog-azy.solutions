@@ -56,7 +56,12 @@
         </template>
         <template x-if="featuredArticle">
             <article class="blog-featured">
-                <img :src="featuredArticle.image" :alt="featuredArticle.title" class="blog-featured-image">
+                <div class="blog-featured-image-container">
+                    <div class="news-badge">
+                        <div>• News </div>
+                    </div>
+                    <img :src="featuredArticle.image" :alt="featuredArticle.title" class="blog-featured-image">
+                </div>
                 <div class="blog-featured-content">
                     <h1 class="blog-title" x-text="featuredArticle.title"></h1>
                     <div class="blog-meta">
