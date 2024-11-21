@@ -1,7 +1,11 @@
-const BASE_URL = window.location.hostname.includes('github.io') 
-    ? '/new-blog-azy.solutions'
-    : '';
-
+let BASE_URL = '';
+if (window.location.hostname === 'blog.azy.solutions') {
+    BASE_URL = '';
+} else if (window.location.hostname === 'fsebbah.github.io') {
+    BASE_URL = '/new-blog-azy.solutions';
+} else {
+    BASE_URL = ''; // Exemple pour un environnement local
+}
 document.addEventListener('alpine:init', () => {
     Alpine.data('blogData', (initialData = {}) => ({
         articles: [],

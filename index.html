@@ -55,15 +55,20 @@
             <p>Chargement en cours...</p>
         </template>
         <template x-if="featuredArticle">
+
             <article class="blog-featured">
-                <img :src="featuredArticle.image" :alt="featuredArticle.title" class="blog-featured-image">
+                <div class="blog-featured-image-container">
+                    <div class="news-badge">• News </div>
+                    <img :src="featuredArticle.image" :alt="featuredArticle.title" class="blog-featured-image">
+                </div>
+
                 <div class="blog-featured-content">
-                    <h1 class="blog-title" x-text="featuredArticle.title"></h1>
+                    <h2 class="blog-title" x-text="featuredArticle.title"></h2>
                     <div class="blog-meta">
                         <span x-text="featuredArticle.category"></span>
                         <span>•</span>
                         <span x-text="featuredArticle.readTime + ' min de lecture'"></span>
-                    </div>
+                    </div>  
                     <p class="blog-description" x-text="featuredArticle.description"></p>
                     <a :href="featuredArticle.url" class="blue-button" :aria-label="`Lire l'article ${featuredArticle.title}`">Lire l'article</a>
                 </div>
