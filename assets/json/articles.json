@@ -42,11 +42,32 @@
     {
         "id": 5,
         "title": "Homme vs Machine : l’IA peut-elle vraiment surpasser l’intelligence humaine ?",
-        "description": "Avec des avancées impressionnantes comme la victoire d’AlphaGo contre le champion Lee Sedol en 2016, l’intelligence artificielle semble franchir des barrières autrefois réservées à l’intuition et à la créativité humaines. .",
+        "description": "Avec des avancées impressionnantes comme la victoire d’AlphaGo contre le champion Lee Sedol en 2016, l’intelligence artificielle semble franchir des barrières autrefois réservées à l’intuition et à la créativité humaines.",
         "image": "/assets/img/article_5.webp",
         "category": "Intelligence Artificielle",
         "date": "2024-11-22",
         "readTime": 5,
         "url": "posts/homme-vs-machine.html"
+    },
+    {
+        "id": 6,
+        "title": "Face à l'essor de l'IA, les cinq enjeux critiques de 2025.",
+        "description": "De la discrimination aux cyberattaques, l’IA n’a pas que des promesses. Voici les 5 dangers qu’elle cache et les solutions pour les anticiper en 2025.",
+        "image": "/assets/img/chromed-prompt-driven-generative-artificial-intelligence-for-work.png",
+        "category": "Hacking",
+        "date": "2024-11-25",
+        "readTime": 5,
+        "url": "posts/les-5-plus-grands-dangers-ia.html"
+    },
+    {
+        "id": 7,
+        "title": "Guide pratique 2025 : protégez vos données personnelles face à l’Intelligence Artificielle.",
+        "description": "L'intelligence artificielle peut transformer votre quotidien... mais qu'en est-il des risques pour vos données personnelles ? Apprenez à les sécuriser efficacement grâce à ce guide..",
+        "image": "/assets/img/chromed-prompt-driven-generative-artificial-intelligence-for-work.png",
+        "category": "Hacking",
+        "date": "2024-11-26",
+        "readTime": 5,
+        "url": "posts/guide-pratique-2025.html"
     }
+
 ]
