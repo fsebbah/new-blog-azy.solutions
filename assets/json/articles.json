@@ -48,5 +48,56 @@
         "date": "2024-11-22",
         "readTime": 9,
         "url": "posts/homme-vs-machine.html"
-    }
+    },
+
+    {
+        "id":6,
+        "title": "Face à l'essor de l'IA, les cinq enjeux critiques de 2024",
+        "description": "À l'heure où l'IA évolue rapidement, il est essentiel de comprendre ses risques et de rester vigilant. L'innovation doit toujours aller de pair avec la sécurité ! 🔐",
+        "image": "/assets/img/article1.webp",
+        "category": "Intelligence Artificielle",
+        "date": "2024-11-25",
+        "readTime": 8,
+        "url": "posts/de-turing-a-chatgpt.html"
+    },
+    {
+        "id": 7,
+        "title": "Guide pratique 2024 : protégez vos données personnelles face à l’Intelligence Artificielle.",
+        "description": "Vous entendez parler d'IA tous les jours, mais savez-vous vraiment comment elle fonctionne ? Des assistants vocaux aux voitures autonomes, en passant par la détection de fraudes bancaires... L'IA est partout !",
+        "image": "/assets/img/article2.webp",
+        "category": "Intelligence Artificielle",
+        "date": "2024-11-26",
+        "readTime": 6,
+        "url": "posts/comprendre-l-ia-de-a-a-z.html"
+    },
+    {
+        "id": 8,
+        "title": "RGPD et IA : Ce que dit la loi européenne sur l’intelligence artificielle.",
+        "description": "L'intelligence artificielle (IA) s'intègre de plus en plus dans nos vies quotidiennes et transforme déjà de nombreux secteurs, de la finance à la santé, en passant par l'agriculture.",
+        "image": "/assets/img/article3.webp",
+        "category": "Intelligence Artificielle",
+        "date": "2024-11-27",
+        "readTime": 7,
+        "url": "posts/de-l-e-commerce-a-l-agriculture.html"
+    },
+    {
+        "id": 9,
+        "title": "Comment garantir une IA éthique et responsable dans votre entreprise ?",
+        "description": "'Alexa, quelle est la météo aujourd'hui ?' 'Siri, règle une alarme pour 7h demain.' Ces phrases, vous les avez peut-être déjà prononcées au moins une fois. Ce que vous ne savez peut-être pas, c'est que derrière ces interactions se cache une technologie sophistiquée : l'intelligence artificielle.",
+        "image": "/assets/img/article4.webp",
+        "category": "Intelligence Artificielle",
+        "date": "2024-11-28",
+        "readTime": 4,
+        "url": "posts/IA-au-quotidien.html"
+    },
+    {
+        "id": 10,
+        "title": "Les clés d'une IA performante et fiable : guide d'action 2025",
+        "description": "Avec des avancées impressionnantes comme la victoire d’AlphaGo contre le champion Lee Sedol en 2016, l’intelligence artificielle semble franchir des barrières autrefois réservées à l’intuition et à la créativité humaines. .",
+        "image": "/assets/img/article_5.webp",
+        "category": "Intelligence Artificielle",
+        "date": "2024-11-29",
+        "readTime": 9,
+        "url": "posts/homme-vs-machine.html"
+    }    
 ]
