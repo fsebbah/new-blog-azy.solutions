@@ -1,3 +1,4 @@
+// main.js
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     const menuToggle = document.querySelector('.menu-toggle');

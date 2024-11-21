@@ -101,9 +101,11 @@
                     </div>
                 </article>
             </template>
+            <button x-show="visibleArticles.length < articles.length" @click="loadMore" class="blog-compact-load-more">
+                Charger plus d'articles
+            </button>
         </div>
     </div>
-    
     <div id="thankYouMessage" class="modal">
         <div class="modal-content">
             <div class="modal-header">
