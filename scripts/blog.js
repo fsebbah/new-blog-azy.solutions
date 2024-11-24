@@ -1,3 +1,4 @@
+//blog.js
 let BASE_URL = '';
 if (window.location.hostname === 'blog.azy.solutions') {
     BASE_URL = '';
