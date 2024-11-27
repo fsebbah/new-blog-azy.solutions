@@ -87,7 +87,17 @@
         "category": "éthique",
         "date": "2024-11-28",
         "readTime": 5,
-        "url": "posts/rgpd-et-ia.html"
+        "url": "posts/comment-garantir-une-ia-ethique-et-responsable.html"
+    },
+    {
+        "id": 10,
+        "title": "Les clés d'une IA performante et fiable : guide d'action 2025",
+        "description": "Monitoring en temps réel, réduction des coûts, satisfaction client : notre guide 2025 vous livre toutes les clés pour développer une IA performante et rentable.",
+        "image": "/assets/img/article10.webp",
+        "category": "éthique",
+        "date": "2024-11-29",
+        "readTime": 5,
+        "url": "posts/les-clés-IA performante-et-fiable.html"
     }
 
 
