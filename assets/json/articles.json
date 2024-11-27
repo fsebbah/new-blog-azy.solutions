@@ -68,6 +68,27 @@
         "date": "2024-11-26",
         "readTime": 5,
         "url": "posts/guide-pratique-2025.html"
+    },
+    {
+        "id": 8,
+        "title": "RGPD et IA : Ce que dit la loi européenne sur l’intelligence artificielle.",
+        "description": "L’Europe impose des règles inédites pour une intelligence artificielle éthique et transparente : découvrez comment la loi protège vos droits tout en encadrant cette technologie.",
+        "image": "/assets/img/article-8.webp",
+        "category": "RGPD",
+        "date": "2024-11-27",
+        "readTime": 5,
+        "url": "posts/rgpd-et-ia.html"
+    },
+    {
+        "id": 9,
+        "title": "Comment garantir une IA éthique et responsable dans votre entreprise ?",
+        "description": "Comment transformer l'IA en un atout éthique et responsable ? Découvrez les piliers, outils et certifications essentiels pour innover durablement tout en renforçant la confiance de vos clients et partenaires.",
+        "image": "/assets/img/article-9.webp",
+        "category": "éthique",
+        "date": "2024-11-28",
+        "readTime": 5,
+        "url": "posts/rgpd-et-ia.html"
     }
+
 
 ]
