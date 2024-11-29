@@ -259,12 +259,14 @@ nav a {
 /* Generative blog post */
 .blog-container {
     max-width: 1200px;
+    margin-right: 14vw;
+    margin-left: 14vw;
     margin: 0 auto;
     padding: 2rem;
 }
 .blog-featured {
     display: grid;
-    gap: 2rem;
+    /* gap: 2rem; */
     margin-bottom: 3rem;
     background-color: #ffffff;
     border-radius: 0.5rem;
