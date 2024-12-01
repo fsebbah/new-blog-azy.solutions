@@ -53,7 +53,7 @@
         "id": 6,
         "title": "Face à l'essor de l'IA, les cinq enjeux critiques de 2025.",
         "description": "De la discrimination aux cyberattaques, l’IA n’a pas que des promesses. Voici les 5 dangers qu’elle cache et les solutions pour les anticiper en 2025.",
-        "image": "/assets/img/chromed-prompt-driven-generative-artificial-intelligence-for-work.png",
+        "image": "/assets/img/article6.webp",
         "category": "Hacking",
         "date": "2024-11-25",
         "readTime": 5,
@@ -63,7 +63,7 @@
         "id": 7,
         "title": "Guide pratique 2025 : protégez vos données personnelles face à l’Intelligence Artificielle.",
         "description": "L'intelligence artificielle peut transformer votre quotidien... mais qu'en est-il des risques pour vos données personnelles ? Apprenez à les sécuriser efficacement grâce à ce guide..",
-        "image": "/assets/img/article_7.webp",
+        "image": "/assets/img/article7.webp",
         "category": "Hacking",
         "date": "2024-11-26",
         "readTime": 5,
@@ -73,7 +73,7 @@
         "id": 8,
         "title": "RGPD et IA : Ce que dit la loi européenne sur l’intelligence artificielle.",
         "description": "L’Europe impose des règles inédites pour une intelligence artificielle éthique et transparente : découvrez comment la loi protège vos droits tout en encadrant cette technologie.",
-        "image": "/assets/img/article-8.webp",
+        "image": "/assets/img/article8.webp",
         "category": "RGPD",
         "date": "2024-11-27",
         "readTime": 5,
@@ -98,7 +98,57 @@
         "date": "2024-11-29",
         "readTime": 5,
         "url": "posts/les-clés-IA-performante-et-fiable-2025.html"
-    }
+    },
+    {
+        "id": 11,
+        "title": "Intégrer l’IA générative à son environnement de travail : une révolution à portée de clic",
+        "description": "Prêt à révolutionner votre façon de travailler ? Découvrez comment l’IA générative peut améliorer votre productivité et vos processus internes.",
+        "image": "/assets/img/article11.webp",
+        "category": "IA Générative",
+        "date": "2024-12-02",
+        "readTime": 5,
+        "url": "posts/ia-generative-au-travail.html"
+    },
+    {
+        "id": 12,
+        "title": "Adoption de l'IA en entreprise : ce qu’en pensent réellement employeurs et employés",
+        "description": "Peur de l'IA ou opportunité ? Voici comment les entreprises innovantes transforment cette révolution technologique en levier de performance et d'épanouissement humain.",
+        "image": "/assets/img/article12.webp",
+        "category": "Entreprise",
+        "date": "2024-12-03",
+        "readTime": 5,
+        "url": "posts/les-clés-IA-performante-et-fiable-2025.html"
+    },
 
+    {
+        "id": 13,
+        "title": "Boostez votre productivité avec l’IA : 10 tâches simples à déléguer dès aujourd’hui",
+        "description": "Voici 10 tâches répétitives que l’IA peut prendre en charge pour optimiser votre quotidien professionnel, tout en vous permettant de vous concentrer sur ce qui a vraiment de la valeur.",
+        "image": "/assets/img/article13.webp",
+        "category": "Productivité",
+        "date": "2024-12-04",
+        "readTime": 5,
+        "url": "posts/boostez-votre-productivite-avec-ia.html"
+    },
+    {
+        "id": 14,
+        "title": "IA et emploi : Comment protéger votre carrière à l’ère de l’automatisation.",
+        "description": "Dans l'ère de l'intelligence artificielle, votre carrière n'est pas condamnée mais en mutation : une opportunité de réinvention professionnelle se profile, transformant la menace technologique en tremplin de croissance. Voici ce qui vous attend !",
+        "image": "/assets/img/article14.webp",
+        "category": "Emploi",
+        "date": "2024-12-05",
+        "readTime": 5,
+        "url": "posts/ia-et-emploi-comment-vous-proteger.html"
+    },
+    {
+        "id": 15,
+        "title": "Guide ultime de l'IA au travail : les meilleurs outils par métier et comment les utiliser",
+        "description": "L’IA transforme le monde du travail, mais le choix des bons outils est essentiel. Explorez ces outils, testez-les, et préparez-vous à une transition réussie vers le futur du travail.",
+        "image": "/assets/img/article15.webp",
+        "category": "Outil IA",
+        "date": "2024-12-06",
+        "readTime": 5,
+        "url": "posts/les-clés-IA-performante-et-fiable-2025.html"
+    }
 
 ]
