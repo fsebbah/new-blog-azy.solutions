@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     ? '/new-blog-azy.solutions'
     : '';
     // Toggle menu mobile
-    menuToggle.addEventListener('click', () => {
-        nav.classList.toggle('active');
-    });
+    // menuToggle.addEventListener('click', () => {
+    //     nav.classList.toggle('active');
+    // });
 
     // Gestion du surlignage actif dans la table des matières
     function setActiveLink() {
