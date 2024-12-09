@@ -149,6 +149,49 @@
         "date": "2024-12-06",
         "readTime": 5,
         "url": "posts/guide-ultime-ia-au-travail.html"
+    },
+
+    {
+        "id": 16,
+        "title": "IA durable : les certifications environnementales arrivent.",
+        "description": "Avec la démocratisation des IA, ces technologies énergivores nécessitent une régulation urgente. De nouvelles normes ambitieuses émergent pour allier innovation technologique et durabilité environnementale, découvrez-les dans cet article !",
+        "image": "/assets/img/article16.webp",
+        "category": "Goodies",
+        "date": "2024-12-09",
+        "readTime": 5,
+        "url": "posts/ia-durable-certifications-environnementales.tml"
+    },
+
+    {
+        "id": 17,
+        "title": "Les soft skills de l'ère IA : quelles compétences humaines cultiver ?.",
+        "description": "Dans un monde où l'IA prend de l'ampleur, certaines compétences humaines deviennent plus cruciales que jamais. Découvrez les soft skills indispensables pour rester compétitif et réussir dans ce nouvel environnement professionnel.",
+        "image": "/assets/img/article17.webp",
+        "category": "goodies",
+        "date": "2024-12-10",
+        "readTime": 5,
+        "url": "posts/les-softs-kills.html"
+    },
+    {
+        "id": 18,
+        "title": "L'IA contre les fake news : solution miracle ou nouveau problème ?",
+        "description": "Et si l’IA, censée combattre les fake news, devenait aussi leur meilleure alliée ? Comprenez ses promesses, ses dérives et les régulations indispensables pour protéger nos démocraties.",
+        "image": "/assets/img/article18.webp",
+        "category": "goodies",
+        "date": "2024-12-11",
+        "readTime": 5,
+        "url": "posts/fakenews-et-ia.html"
+    },
+    {
+        "id": 19,
+        "title": "L'IA et le sommeil : comment les algorithmes veulent améliorer nos nuits",
+        "description": "L’IA peut-elle révolutionner nos nuits tout en respectant notre vie privée ? Découvrez comment ces technologies promettent d'améliorer votre sommeil et les enjeux qu'elles soulèvent.",
+        "image": "/assets/img/article19.webp",
+        "category": "Outil IA",
+        "date": "2024-12-12",
+        "readTime": 5,
+        "url": "posts/ia-et-sommeil.html"
     }
+
 
 ]
