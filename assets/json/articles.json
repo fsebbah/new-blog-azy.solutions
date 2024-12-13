@@ -207,27 +207,27 @@
         "id": 21,
         "title": "Préparer son entreprise aux super-IA : quelles étapes pour rester compétitif ?",
         "description": "Les super-IA sont sur le point de transformer les entreprises. Apprenez comment les intégrer efficacement et prendre de l’avance pour rester compétitif.",
-        "image": "/assets/img/article18.webp",
+        "image": "/assets/img/article21.webp",
         "category": "goodies",
         "date": "2024-12-16",
         "readTime": 5,
-        "url": "posts/fakenews-et-ia.html"
+        "url": "posts/preparer-son-entreprise-super-ia.html"
     },
     {
         "id": 22,
         "title": "L'empreinte carbone de l'IA : le vrai coût de nos prompts",
         "description": "L'IA transforme notre monde, mais à quel prix écologique ? Découvrez l'impact énergétique des technologies et les solutions pour un avenir numérique plus durable.",
-        "image": "/assets/img/article19.webp",
+        "image": "/assets/img/article22.webp",
         "category": "goodies",
         "date": "2024-12-17",
         "readTime": 5,
-        "url": "posts/ia-et-sommeil.html"
+        "url": "posts/empreinte-carbone-et-ia.html"
     },
     {
         "id": 23,
         "title": "La politesse envers les IA : ces nouvelles normes sociales qui émergent.",
-        "description": "Comment l'intelligence artificielle révolutionne les jeux vidéo ? Création de mondes uniques, PNJ évolutifs et immersion personnalisée, plongez dans cette transformation captivante.",
-        "image": "/assets/img/article20.webp",
+        "description": "Et si être poli avec une IA pouvait changer notre façon d'interagir avec les machines et les autres ? Apprenez comment cette nouvelle norme sociale transforme nos comportements numériques et humains.",
+        "image": "/assets/img/article23.webp",
         "category": "goodies",
         "date": "2024-12-18",
         "readTime": 5,
