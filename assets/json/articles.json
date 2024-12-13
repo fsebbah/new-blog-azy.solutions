@@ -209,9 +209,9 @@
         "description": "Les super-IA sont sur le point de transformer les entreprises. Apprenez comment les intégrer efficacement et prendre de l’avance pour rester compétitif.",
         "image": "/assets/img/article21.webp",
         "category": "goodies",
-        "date": "2024-12-17",
+        "date": "2024-12-16",
         "readTime": 5,
-        "url": "posts/fakenews-et-ia.html"
+        "url": "posts/preparer-son-entreprise-super-ia.html"
     },
     {
         "id": 22,
@@ -221,15 +221,15 @@
         "category": "goodies",
         "date": "2024-12-17",
         "readTime": 5,
-        "url": "posts/ia-et-sommeil.html"
+        "url": "posts/empreinte-carbone-et-ia.html"
     },
     {
         "id": 23,
         "title": "La politesse envers les IA : ces nouvelles normes sociales qui émergent.",
-        "description": "Comment l'intelligence artificielle révolutionne les jeux vidéo ? Création de mondes uniques, PNJ évolutifs et immersion personnalisée, plongez dans cette transformation captivante.",
-        "image": "/assets/img/article20.webp",
+        "description": "Et si être poli avec une IA pouvait changer notre façon d'interagir avec les machines et les autres ? Apprenez comment cette nouvelle norme sociale transforme nos comportements numériques et humains.",
+        "image": "/assets/img/article23.webp",
         "category": "goodies",
-        "date": "2024-12-19",
+        "date": "2024-12-18",
         "readTime": 5,
         "url": "posts/jeux-video-et-ia.html"
     }
