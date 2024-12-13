@@ -11,7 +11,7 @@ document.addEventListener('alpine:init', () => {
     Alpine.data('blogData', (initialData = {}) => ({
         articles: [],
         featuredArticle: null,
-        visibleCount: 5,
+        visibleCount: 10,
         currentArticleId: initialData.currentArticleId || null,
         init() {
             this.loadArticles();
