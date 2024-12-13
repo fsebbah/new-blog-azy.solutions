@@ -207,9 +207,9 @@
         "id": 21,
         "title": "Préparer son entreprise aux super-IA : quelles étapes pour rester compétitif ?",
         "description": "Les super-IA sont sur le point de transformer les entreprises. Apprenez comment les intégrer efficacement et prendre de l’avance pour rester compétitif.",
-        "image": "/assets/img/article18.webp",
+        "image": "/assets/img/article21.webp",
         "category": "goodies",
-        "date": "2024-12-21",
+        "date": "2024-12-17",
         "readTime": 5,
         "url": "posts/fakenews-et-ia.html"
     },
@@ -229,7 +229,7 @@
         "description": "Comment l'intelligence artificielle révolutionne les jeux vidéo ? Création de mondes uniques, PNJ évolutifs et immersion personnalisée, plongez dans cette transformation captivante.",
         "image": "/assets/img/article20.webp",
         "category": "goodies",
-        "date": "2024-12-18",
+        "date": "2024-12-19",
         "readTime": 5,
         "url": "posts/jeux-video-et-ia.html"
     }
