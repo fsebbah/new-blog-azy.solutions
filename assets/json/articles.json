@@ -187,10 +187,20 @@
         "title": "L'IA et le sommeil : comment les algorithmes veulent améliorer nos nuits",
         "description": "L’IA peut-elle révolutionner nos nuits tout en respectant notre vie privée ? Découvrez comment ces technologies promettent d'améliorer votre sommeil et les enjeux qu'elles soulèvent.",
         "image": "/assets/img/article19.webp",
-        "category": "Outil IA",
+        "category": "goodies",
         "date": "2024-12-12",
         "readTime": 5,
         "url": "posts/ia-et-sommeil.html"
+    },
+    {
+        "id": 20,
+        "title": "L'IA dans les jeux vidéo : au-delà des PNJ intelligents",
+        "description": "Comment l'intelligence artificielle révolutionne les jeux vidéo ? Création de mondes uniques, PNJ évolutifs et immersion personnalisée, plongez dans cette transformation captivante.",
+        "image": "/assets/img/article20.webp",
+        "category": "goodies",
+        "date": "2024-12-13",
+        "readTime": 5,
+        "url": "posts/jeux-video-et-ia.html"
     }
 
 
