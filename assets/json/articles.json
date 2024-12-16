@@ -231,7 +231,27 @@
         "category": "goodies",
         "date": "2024-12-18",
         "readTime": 5,
-        "url": "posts/jeux-video-et-ia.html"
+        "url": "posts/politesse-et-ia.html"
+    },
+    {
+        "id": 24,
+        "title": "Les seniors face à l’IA : fracture numérique ou nouvelle opportunité ?",
+        "description": "Et si les seniors devenaient des pionniers de l’inclusion digitale grâce à l’IA ? Santé, autonomie, lien social : nous décryptons l'utilisation de l’IA par les personnes agées.",
+        "image": "/assets/img/article24.webp",
+        "category": "senior",
+        "date": "2024-12-19",
+        "readTime": 5,
+        "url": "posts/les-seniors-face-a-ia.html"
+    },
+    {
+        "id": 25,
+        "title": "L'IA au cinéma : comment les algorithmes changent la façon dont on crée et consomme des films.",
+        "description": "L'intelligence artificielle transforme le cinéma, entre innovations spectaculaires et défis éthiques. Comment cette technologie redéfinit-elle la création et la consommation de films ?",
+        "image": "/assets/img/article25.webp",
+        "category": "cinema",
+        "date": "2024-12-20",
+        "readTime": 5,
+        "url": "posts/ia-au-cinema.html"
     }
 
 
