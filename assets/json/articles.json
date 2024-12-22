@@ -252,7 +252,50 @@
         "date": "2024-12-20",
         "readTime": 5,
         "url": "posts/ia-au-cinema.html"
+    },
+
+
+    {
+        "id": 26,
+        "title": "Responsabilité professionnelle et IA : qui est responsable des erreurs d'un algorithme ?",
+        "description": "L'intelligence artificielle révolutionne nos décisions, mais qui répond de ses erreurs ? Comprenez les enjeux juridiques, éthiques et pratiques pour mieux anticiper ses impacts.",
+        "image": "/assets/img/article26.webp",
+        "category": "goodies",
+        "date": "2024-12-23",
+        "readTime": 5,
+        "url": "posts/responsabilite-professionnelle-et-ia.html"
+    },
+    {
+        "id": 27,
+        "title": "IA et Noël : et si le Père Noël était une IA ?",
+        "description": "Quand la technologie facilite Noël : des cadeaux de dernière minute aux soirées animées, l'IA transforme vos fêtes en un moment magique.",
+        "image": "/assets/img/article27.webp",
+        "category": "goodies",
+        "date": "2024-12-24",
+        "readTime": 5,
+        "url": "posts/le-pere-noel-et-ia.html"
+    },
+    {
+        "id": 28,
+        "title": "L’IA envahie par des données fictives : un problème sous-estimé.",
+        "description": "Et si l’IA, pourtant si prometteuse, était mise en péril par des données fictives ? Découvrez pourquoi ces erreurs coûtent cher et comment les éviter pour un avenir durable.",
+        "image": "/assets/img/article28.webp",
+        "category": "senior",
+        "date": "2024-12-26",
+        "readTime": 5,
+        "url": "posts/ia-et-donnees-fictives.html"
+    },
+    {
+        "id": 29,
+        "title": "La course à l'IA souveraine : l'Europe peut-elle rattraper son retard ?",
+        "description": "Alors que les État-unis et la Chine se positionnent comme leader en matière d’IA, qu’en est-il de L'Europe ? Entre innovation technologique et souveraineté éthique dans la course à l'IA, l’Europe tente de trouver un équilibre pour rattraper son retard.",
+        "image": "/assets/img/article29.webp",
+        "category": "cinema",
+        "date": "2024-12-27",
+        "readTime": 5,
+        "url": "posts/la-course-a-ia-souveraine.html"
     }
+
 
 
 ]
