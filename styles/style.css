@@ -514,7 +514,7 @@ img.blog-compact-image {
     margin-left: 5rem;
 }
 .post-hero h1{
-    font-size: 3.375rem;
+    font-size: 2.375rem;
     line-height: 1.6;
     margin-top: 0;
     margin-bottom: 1.25rem;
@@ -804,7 +804,7 @@ h2 {
         margin: 1.25rem 3rem;
     }
     .post-hero h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 }
 @media (max-width: 400px) {
@@ -834,7 +834,6 @@ h2 {
         width: 48%;
     }
 }
-
 
 /* Newsletter section */
 

@@ -250,11 +250,10 @@
         "image": "/assets/img/article25.webp",
         "category": "cinema",
         "date": "2024-12-20",
+        "tags":"",
         "readTime": 5,
         "url": "posts/ia-au-cinema.html"
     },
-
-
     {
         "id": 26,
         "title": "Responsabilité professionnelle et IA : qui est responsable des erreurs d'un algorithme ?",
@@ -267,7 +266,7 @@
     },
     {
         "id": 27,
-        "title": "IA et Noël : et si le Père Noël était une IA ?",
+        "title": "Quand l’IA rencontre le Père Noël : ce qu’elle pourrait faire de mieux (ou pas)",
         "description": "Quand la technologie facilite Noël : des cadeaux de dernière minute aux soirées animées, l'IA transforme vos fêtes en un moment magique.",
         "image": "/assets/img/article27.webp",
         "category": "goodies",
