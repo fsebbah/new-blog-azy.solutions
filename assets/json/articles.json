@@ -293,6 +293,57 @@
         "date": "2024-12-27",
         "readTime": 5,
         "url": "posts/la-course-a-ia-souveraine.html"
+    },
+    {
+        "id": 30,
+        "title": "2025 : l’année où le travail se fait main dans la main avec l’IA.",
+        "description": "Et si l’IA devenait votre collègue en 2025 ? Opportunités, défis, nouveaux métiers... Voici ce que vous devez savoir pour anticiper ce futur hybride.",
+        "image": "/assets/img/article27.webp",
+        "category": "travail",
+        "date": "2025-01-06",
+        "readTime": 5,
+        "url": "posts/2025-annee-du-travail-avec-ia.html"
+    },
+    {
+        "id": 31,
+        "title": "Les IA thérapeutiques : quand ChatGPT devient un confident.",
+        "description": "L'intelligence artificielle révolutionne nos décisions, mais qui répond de ses erreurs ? Comprenez les enjeux juridiques, éthiques et pratiques pour mieux anticiper ses impacts.",
+        "image": "/assets/img/article26.webp",
+        "category": "thérapie",
+        "date": "2025-01-07",
+        "readTime": 5,
+        "url": "posts/therapie-et-ia.html"
+    },
+
+    {
+        "id": 32,
+        "title": "L’IA, une technologie en pleine croissance ou une bulle prête à éclater ?",
+        "description": "L’intelligence artificielle est-elle une révolution durable ou une bulle surévaluée ? Données clés, enjeux et tendances 2025 : faites le point sur ce qui vous attend cette année.",
+        "image": "/assets/img/article28.webp",
+        "category": "finances",
+        "date": "2025-01-08",
+        "readTime": 5,
+        "url": "posts/ia-technologie-en-pleine-croissance-ou-bombe-a-retardement.html"
+    },
+    {
+        "id": 33,
+        "title": "La recherche française en IA : nos domaines d'excellence.",
+        "description": "La France s'impose comme un acteur majeur de l'IA, avec des avancées spectaculaires dans plusieurs secteurs. Quel futur pour l'innovation française en 2025, voici ce à quoi s’attendre !",
+        "image": "/assets/img/article29.webp",
+        "category": "recherche",
+        "date": "2025-01-09",
+        "readTime": 5,
+        "url": "posts/la-recherche-francaise-en-ia-nos-domaines-excellence.html"
+    },
+    {
+        "id": 34,
+        "title": "Le boom des IA locales : pourquoi tout le monde veut son LLM personnel.",
+        "description": "La France s'impose comme un acteur majeur de l'IA, avec des avancées spectaculaires dans plusieurs secteurs. Quel futur pour l'innovation française en 2025, voici ce à quoi s’attendre !",
+        "image": "/assets/img/article29.webp",
+        "category": "LLM",
+        "date": "2025-01-10",
+        "readTime": 5,
+        "url": "posts/le-boom-des-ia-locales.html"
     }
 
 
