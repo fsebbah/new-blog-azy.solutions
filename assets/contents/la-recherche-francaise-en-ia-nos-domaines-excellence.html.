@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La recherche française en IA : nos domaines d'excellence</title>
+</head>
+<body>
+    <h1>La recherche française en IA : nos domaines d'excellence</h1>
+    <p>La France se positionne aujourd’hui comme un acteur majeur de l’intelligence artificielle grâce à une stratégie ambitieuse et des investissements ciblés. Avec des initiatives comme le plan « France 2030 » et des startups innovantes telles que <strong>Mistral AI</strong>, le pays rivalise avec la Silicon Valley tout en adoptant une approche européenne axée sur l’éthique<a href="https://www.euronews.com/business/2024/11/26/how-french-start-up-mistral-ai-is-planning-to-take-on-silicon-valley" target="_blank"><sup>[1]</sup></a>.</p>
+
+    <p>Toutefois, les <strong>réglementations européennes</strong> suscitent des réactions contrastées. Si des entrepreneurs comme Elon Musk les considèrent comme <strong>un frein à l’innovation</strong>, elles inspirent au contraire une partie des consommateurs américains, attirés par l’équilibre entre innovation et responsabilité<a href="https://www.enseignementsup-recherche.gouv.fr/fr/la-strategie-francaise-en-intelligence-artificielle-49166" target="_blank"><sup>[2]</sup></a>.</p>
+
+    <!-- Sidebar avec navigation -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#domaines-excellence">Les domaines d’excellence en IA en France</a></li>
+            <li><a href="#projections-2025">Projections pour 2025 : une IA à la française</a></li>
+            <li><a href="#points-cles">Points clés à retenir</a></li>
+        </ul>
+    </aside>
+
+    <section id="domaines-excellence">
+        <h2>Les domaines d’excellence en IA en France</h2>
+        <p>Trois domaines se distinguent par leur contribution exceptionnelle à la recherche et à l’innovation en IA :</p>
+        <h3>Le traitement du langage naturel (NLP)</h3>
+        <p>Le traitement du langage naturel est l’un des points forts de la France en matière d’IA. Des entreprises comme Mistral AI développent des modèles génératifs avancés, capables de rivaliser avec OpenAI et Google<a href="https://time.com/7007040/mistral-ai-ceo-arthur-mensch-interview/" target="_blank"><sup>[3]</sup></a>. Ces modèles permettent des applications variées, allant de la traduction automatique à la création de contenus personnalisés, avec une approche éthique et respectueuse des données personnelles.</p>
+
+        <h3>L’IA embarquée et les applications industrielles</h3>
+        <p>L’optimisation des modèles pour les appareils à faible consommation d’énergie est un autre domaine d’excellence. Ces avancées stratégiques pour l’industrie, notamment dans l’automobile et l’IoT, réduisent la dépendance aux centres de données énergivores et accélèrent la transition écologique<a href="https://www.usinenouvelle.com/editorial/mistral-ai-championne-francaise-de-l-intelligence-artificielle-generative.N2205301" target="_blank"><sup>[4]</sup></a>.</p>
+
+        <h3>La cybersécurité et l’IA</h3>
+        <p>Dans un contexte mondial de menaces croissantes, la France mise sur l’intégration de l’IA dans la cybersécurité pour renforcer la défense des infrastructures critiques et protéger les données sensibles<a href="https://www.enseignementsup-recherche.gouv.fr/fr/france-2030-l-ia-comme-un-accelerateur-et-un-differentiateur-d-innovation-96213" target="_blank"><sup>[5]</sup></a>. Ces innovations favorisent une souveraineté numérique et une réponse proactive face aux cyberattaques.</p>
+    </section>
+
+    <section id="projections-2025">
+        <h2>Projections pour 2025 : une IA à la française</h2>
+        <p>Avec des investissements publics massifs, dont les 2,2 milliards d’euros alloués au plan « France 2030 », la France se dote d’un écosystème propice à l’innovation<a href="https://www.entreprises.gouv.fr/secteurs-dactivite/numerique/intelligence-artificielle-en-france-un-ecosysteme-dexcellence" target="_blank"><sup>[6]</sup></a>. Cette stratégie ambitieuse vise à créer des emplois hautement qualifiés, attirer des talents internationaux, et établir un leadership européen.</p>
+
+        <p>L’approche collaborative et responsable du pays repose sur la création de partenariats stratégiques entre États membres et la promotion de normes communes pour une IA plus humaine et durable. Ces initiatives renforcent l’indépendance de l’Europe face aux géants technologiques mondiaux.</p>
+    </section>
+
+    <div class="learn-more">
+        <h2>Points clés à retenir</h2>
+        <ul>
+            <li>La France se positionne comme un <strong>leader européen de l'IA</strong>, soutenue par des initiatives comme France 2030 et des startups innovantes telles que Mistral AI.</li>
+            <li>Les domaines d'excellence français incluent le traitement du <strong>langage naturel</strong>, l’<strong>IA embarquée</strong> et l’<strong>IA en cybersécurité</strong>.</li>
+            <li>Les investissements publics (2,2 milliards d'euros) et privés renforcent l'écosystème d'innovation, créant des <strong>emplois</strong> et attirant des <strong>talents internationaux</strong>.</li>
+            <li>La France mise sur une <strong>approche éthique et responsable</strong>, tout en renforçant sa souveraineté numérique face à la compétition mondiale.</li>
+            <li>Projections pour 2025 : Un leadership européen dans un environnement technologique en pleine évolution.</li>
+        </ul>
+    </div>
+
+    <div class="learn-more">
+        <h2>Sources</h2>
+        <ul>
+            <li><a href="https://www.euronews.com/business/2024/11/26/how-french-start-up-mistral-ai-is-planning-to-take-on-silicon-valley" target="_blank">Euronews - How French start-up Mistral AI is planning to take on Silicon Valley</a></li>
+            <li><a href="https://www.enseignementsup-recherche.gouv.fr/fr/la-strategie-francaise-en-intelligence-artificielle-49166" target="_blank">Gouvernement français - La stratégie française en intelligence artificielle</a></li>
+            <li><a href="https://time.com/7007040/mistral-ai-ceo-arthur-mensch-interview/" target="_blank">Time - Mistral AI CEO Arthur Mensch Interview</a></li>
+            <li><a href="https://www.usinenouvelle.com/editorial/mistral-ai-championne-francaise-de-l-intelligence-artificielle-generative.N2205301" target="_blank">Usine Nouvelle - Mistral AI, championne française de l'intelligence artificielle générative</a></li>
+            <li><a href="https://www.enseignementsup-recherche.gouv.fr/fr/france-2030-l-ia-comme-un-accelerateur-et-un-differentiateur-d-innovation-96213" target="_blank">Ministère de l’Enseignement supérieur - France 2030 : l’IA comme un accélérateur et un différentiateur d’innovation</a></li>
+            <li><a href="https://www.entreprises.gouv.fr/secteurs-dactivite/numerique/intelligence-artificielle-en-france-un-ecosysteme-dexcellence" target="_blank">Entreprises.gouv.fr - Intelligence artificielle en France : un écosystème d'excellence</a></li>
+        </ul>
+    </div>
+</body>
+</html>
