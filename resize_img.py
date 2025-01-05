@@ -1,8 +1,8 @@
 from PIL import Image
 
 # Chemin vers l'image
-image_path = "assets/img/article23.png"
-output_path = "assets/img/article23.webp"
+image_path = "assets/img/article34.png"
+output_path = "assets/img/article34.webp"
 
 # Ouvrir l'image
 img = Image.open(image_path)
