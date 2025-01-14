@@ -344,6 +344,57 @@
         "date": "2025-01-10",
         "readTime": 5,
         "url": "posts/le-boom-des-ia-locales.html"
+    },
+
+    {
+        "id": 35,
+        "title": "À qui appartient ce que les IA génèrent ?",
+        "description": "Les créations d’IA soulèvent une question cruciale : à qui appartiennent-elles ? Entre droit d’auteur et innovation, faites le point sur les enjeux juridiques et éthiques.",
+        "image": "/assets/img/article35.webp",
+        "category": "Droit",
+        "date": "2025-01-14",
+        "readTime": 5,
+        "url": "posts/ia-et-contenu.html"
+    },
+    {
+        "id": 36,
+        "title": "Les employés et l'IA en 2025 : qui tient vraiment les rênes ?",
+        "description": "L’IA transforme nos métiers, mais sommes-nous toujours aux commandes ? Découvrez comment préserver l’humain face à cette révolution technologique et restez maître de votre avenir professionnel.",
+        "image": "/assets/img/article36.webp",
+        "category": "Emploi",
+        "date": "2025-01-15",
+        "readTime": 5,
+        "url": "posts/ia-et-employes.html"
+    },
+    {
+        "id": 37,
+        "title": "IA et informatique quantique : une révolution attendue pour 2025 ?",
+        "description": "L'informatique quantique et l'IA pourraient redéfinir notre avenir dès 2025. Quels sont les défis, les promesses, et les limites de cette alliance révolutionnaire ?",
+        "image": "/assets/img/article37.webp",
+        "category": "Droit",
+        "date": "2025-01-16",
+        "readTime": 5,
+        "url": "posts/ia-et-contenu.html"
+    },
+    {
+        "id": 38,
+        "title": "Les employés et l'IA en 2025 : qui tient vraiment les rênes ?",
+        "description": "L’IA transforme nos métiers, mais sommes-nous toujours aux commandes ? Découvrez comment préserver l’humain face à cette révolution technologique et restez maître de votre avenir professionnel.",
+        "image": "/assets/img/article38.webp",
+        "category": "Emploi",
+        "date": "2025-01-17",
+        "readTime": 5,
+        "url": "posts/ia-e-t-employes.html"
+    },
+    {
+        "id": 39,
+        "title": "Les employés et l'IA en 2025 : qui tient vraiment les rênes ?",
+        "description": "L’IA transforme nos métiers, mais sommes-nous toujours aux commandes ? Découvrez comment préserver l’humain face à cette révolution technologique et restez maître de votre avenir professionnel.",
+        "image": "/assets/img/article39.webp",
+        "category": "Emploi",
+        "date": "2025-01-20",
+        "readTime": 5,
+        "url": "posts/ia-e-t-employes.html"
     }
 
 
