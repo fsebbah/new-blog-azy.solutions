@@ -124,7 +124,7 @@ document.addEventListener('alpine:init', () => {
         },
 
         loadMore() {
-            this.visibleCount = Math.min(this.visibleCount + 5, this.articles.length);
+            this.visibleCount = Math.min(this.visibleCount + 20, this.articles.length);
         },
 
         isArticleAvailable(articleDate) {
