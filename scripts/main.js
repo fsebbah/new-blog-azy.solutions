@@ -62,9 +62,9 @@ document.addEventListener('DOMContentLoaded', () => {
     setActiveLink();
 
     // Ferme le menu quand on clique en dehors
-    document.addEventListener('click', (event) => {
-        if (!nav.contains(event.target) && !menuToggle.contains(event.target)) {
-            nav.classList.remove('active');
-        }
-    });
+    // document.addEventListener('click', (event) => {
+    //     if (!nav.contains(event.target) && !menuToggle.contains(event.target)) {
+    //         nav.classList.remove('active');
+    //     }
+    // });
 });

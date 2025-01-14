@@ -11,7 +11,7 @@ document.addEventListener('alpine:init', () => {
     Alpine.data('blogData', (initialData = {}) => ({
         articles: [],
         featuredArticle: null,
-        visibleCount: 10,
+        visibleCount: 20,
         currentArticleId: initialData.currentArticleId || null,
         init() {
             this.loadArticles();
@@ -124,7 +124,7 @@ document.addEventListener('alpine:init', () => {
         },
 
         loadMore() {
-            this.visibleCount = Math.min(this.visibleCount + 5, this.articles.length);
+            this.visibleCount = Math.min(this.visibleCount + 20, this.articles.length);
         },
 
         isArticleAvailable(articleDate) {

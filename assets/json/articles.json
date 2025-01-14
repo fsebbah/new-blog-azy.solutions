@@ -43,7 +43,7 @@
         "id": 5,
         "title": "Homme vs Machine : l’IA peut-elle vraiment surpasser l’intelligence humaine ?",
         "description": "Avec des avancées impressionnantes comme la victoire d’AlphaGo contre le champion Lee Sedol en 2016, l’intelligence artificielle semble franchir des barrières autrefois réservées à l’intuition et à la créativité humaines.",
-        "image": "/assets/img/article_5.webp",
+        "image": "/assets/img/article5.webp",
         "category": "Intelligence Artificielle",
         "date": "2024-11-22",
         "readTime": 5,
@@ -344,6 +344,57 @@
         "date": "2025-01-10",
         "readTime": 5,
         "url": "posts/le-boom-des-ia-locales.html"
+    },
+
+    {
+        "id": 35,
+        "title": "À qui appartient ce que les IA génèrent ?",
+        "description": "Les créations d’IA soulèvent une question cruciale : à qui appartiennent-elles ? Entre droit d’auteur et innovation, faites le point sur les enjeux juridiques et éthiques.",
+        "image": "/assets/img/article35.webp",
+        "category": "Droit",
+        "date": "2025-01-14",
+        "readTime": 5,
+        "url": "posts/ia-et-contenu.html"
+    },
+    {
+        "id": 36,
+        "title": "Les employés et l'IA en 2025 : qui tient vraiment les rênes ?",
+        "description": "L’IA transforme nos métiers, mais sommes-nous toujours aux commandes ? Découvrez comment préserver l’humain face à cette révolution technologique et restez maître de votre avenir professionnel.",
+        "image": "/assets/img/article36.webp",
+        "category": "Emploi",
+        "date": "2025-01-15",
+        "readTime": 5,
+        "url": "posts/ia-et-employes.html"
+    },
+    {
+        "id": 37,
+        "title": "IA et informatique quantique : une révolution attendue pour 2025 ?",
+        "description": "L'informatique quantique et l'IA pourraient redéfinir notre avenir dès 2025. Quels sont les défis, les promesses, et les limites de cette alliance révolutionnaire ?",
+        "image": "/assets/img/article37.webp",
+        "category": "Droit",
+        "date": "2025-01-16",
+        "readTime": 5,
+        "url": "posts/ia-et-quantique.html"
+    },
+    {
+        "id": 38,
+        "title": "IA et protection des données : un cercle vicieux à briser en 2025.",
+        "description": "Les fuites de données sont en forte hausse, et l'IA pourrait aggraver le problème. Comment anticiper les risques et protéger nos données en 2025 ?",
+        "image": "/assets/img/article38.webp",
+        "category": "Emploi",
+        "date": "2025-01-17",
+        "readTime": 5,
+        "url": "posts/ia-et-protection-de-donnees.html"
+    },
+    {
+        "id": 39,
+        "title": "Découverte des agents IA et 2025, leur implémentation dans des cas d’usage.",
+        "description": "Les agents IA transforment notre quotidien, passant de simples tests en 2024 à une adoption massive en 2025. Comprenez leur impact et préparez-vous dès maintenant à cette révolution technologique !",
+        "image": "/assets/img/article39.webp",
+        "category": "Emploi",
+        "date": "2025-01-20",
+        "readTime": 5,
+        "url": "posts/decouverte-agents-IA-en-2025.html"
     }
 
 
